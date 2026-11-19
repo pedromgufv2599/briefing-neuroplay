@@ -1,0 +1,37 @@
+@font-face{font-family:Anton;src:url(../fonts/anton-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Anton;src:url(../fonts/anton-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Archivo Black";src:url(../fonts/archivo-black-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Marker;src:url(../fonts/permanent-marker-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:InterW;font-weight:400;src:url(../fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:InterW;font-weight:600;src:url(../fonts/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:InterW;font-weight:800;src:url(../fonts/inter-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:InterW;font-weight:900;src:url(../fonts/inter-latin-900-normal.woff2) format("woff2")}
+
+:root{
+  --red:#FA2F22; --red2:#DC2626; --ink:#0E0F12; --ink2:#16181D; --ink3:#22252C;
+  --white:#FFFFFF; --mute:#9CA3AF; --yellow:#FFD60A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#2a2a2a;font-family:InterW,Inter,sans-serif;color:var(--white)}
+.anton{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.005em;text-transform:uppercase;line-height:.9}
+.archivo{font-family:"Archivo Black",sans-serif}
+.marker{font-family:Marker,cursive}
+.hl{background:var(--yellow);color:var(--ink);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.red{color:var(--red)}
+.yel{color:var(--yellow)}
+
+/* marca */
+.brand{display:flex;align-items:center;gap:14px;font-family:"Archivo Black";font-size:26px;letter-spacing:.06em;text-transform:uppercase}
+.brand .dot{width:34px;height:34px;border-radius:50%;background:var(--red);position:relative;flex:none}
+.brand .dot::after{content:"";position:absolute;inset:9px;border-radius:50%;border:4px solid var(--white)}
+.brand small{display:block;font-family:InterW;font-weight:600;font-size:15px;letter-spacing:.18em;color:var(--mute)}
+.tag{display:inline-flex;align-items:center;gap:12px;font-family:"Archivo Black";text-transform:uppercase;letter-spacing:.08em;font-size:26px;padding:12px 22px;border-radius:999px}
+.disc{font-size:16px;color:#7b808b;letter-spacing:.02em}
+
+/* cartão-resposta de fundo */
+.sheet{position:absolute;display:grid;gap:10px 26px;opacity:.13;pointer-events:none}
+.sheet .row{display:flex;align-items:center;gap:9px;font:600 18px InterW;color:#fff}
+.sheet .row b{width:30px;text-align:right;font-weight:800}
+.sheet .bub{width:22px;height:22px;border-radius:50%;border:2px solid #fff}
+.sheet .bub.on{background:#fff}
+.sheet .bub.x{border-color:var(--red);background:var(--red)}

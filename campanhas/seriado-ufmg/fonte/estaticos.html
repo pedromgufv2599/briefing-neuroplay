@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Seriado UFMG · Peças estáticas</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.board{position:relative;overflow:hidden;margin:40px auto;background:var(--ink)}
+.c45{width:1080px;height:1350px}
+.c916{width:1080px;height:1920px}
+.pad{position:absolute;inset:0;padding:72px 80px;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:center}
+.pager{font:800 22px InterW;letter-spacing:.2em;color:var(--mute)}
+.swipe{display:flex;align-items:center;gap:14px;font-family:"Archivo Black";font-size:26px;letter-spacing:.08em;text-transform:uppercase}
+.swipe i{display:block;width:70px;height:6px;background:var(--red);position:relative}
+.swipe i::after{content:"";position:absolute;right:-4px;top:-9px;border:12px solid transparent;border-left:16px solid var(--red);border-right:0}
+
+/* ---------- SLIDE 1 ---------- */
+#s1{background:radial-gradient(120% 80% at 80% 0%,#2a0d0b 0%,var(--ink) 55%)}
+#s1 .warn{background:var(--yellow);color:var(--ink)}
+#s1 h1{font-size:200px;margin-top:60px;line-height:.92}
+#s1 h1 .l2{margin-top:30px}
+#s1 h1 .l2{display:block;color:var(--red)}
+#s1 .enem{position:relative;display:inline-block}
+#s1 .enem::after{content:"";position:absolute;left:-12px;right:-14px;top:44%;height:24px;background:var(--white);transform:rotate(-7deg);border-radius:6px;box-shadow:0 6px 0 rgba(0,0,0,.35)}
+#s1 .scrib{position:absolute;right:60px;top:360px;transform:rotate(-9deg);font-size:64px;color:var(--yellow);line-height:1}
+#s1 .lead{margin-top:auto;font-size:44px;font-weight:600;line-height:1.22;max-width:900px}
+#s1 .lead b{font-weight:900}
+#s1 .bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:44px}
+#s1 .stamp{position:absolute;right:-40px;bottom:330px;width:330px;height:330px;border-radius:50%;border:8px solid var(--red);color:var(--red);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(14deg);text-align:center;opacity:.95}
+#s1 .stamp b{font-family:Anton;font-size:96px;line-height:.9}
+#s1 .stamp span{font-family:"Archivo Black";font-size:24px;letter-spacing:.1em}
+
+/* ---------- SLIDE 2 ---------- */
+#s2{background:var(--ink2)}
+#s2 .kick{font-family:"Archivo Black";font-size:30px;letter-spacing:.1em;color:var(--red);text-transform:uppercase;margin-top:64px}
+#s2 h2{font-size:150px;margin-top:18px}
+#s2 .list{margin-top:60px;display:flex;flex-direction:column;gap:24px}
+#s2 .it{display:flex;gap:24px;align-items:center;padding:32px 30px;background:var(--ink3);border-radius:22px;border-left:10px solid var(--red)}
+#s2 .it .n{font-family:Anton;font-size:60px;line-height:.9;color:var(--red);min-width:210px;white-space:nowrap}
+#s2 .it p{font-size:34px;line-height:1.22;font-weight:600}
+#s2 .it p b{font-weight:900}
+#s2 .it p small{display:block;font-size:26px;color:var(--mute);font-weight:400;margin-top:4px}
+#s2 .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+#s2 .foot p{font-size:30px;font-weight:800}
+
+/* ---------- SLIDE 3 ---------- */
+#s3{background:var(--red)}
+#s3 .brand small{color:#ffd9d6}
+#s3 .pager{color:#ffd9d6}
+#s3 h2{font-size:100px;margin-top:50px;color:var(--white);line-height:1}
+#s3 h2 span{color:var(--ink)}
+#s3 .meta{display:flex;gap:14px;margin-top:30px}
+#s3 .meta div{background:var(--ink);padding:14px 22px;border-radius:14px;font-family:"Archivo Black";font-size:28px;white-space:nowrap;letter-spacing:.02em}
+#s3 .days{margin-top:34px;display:flex;flex-direction:column;gap:12px}
+#s3 .d{display:grid;grid-template-columns:150px 1fr;align-items:center;background:var(--white);color:var(--ink);border-radius:20px;overflow:hidden;height:104px}
+#s3 .d .w{height:100%;background:var(--ink);color:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Anton;font-size:46px;line-height:.95}
+#s3 .d .w small{font-family:InterW;font-weight:800;font-size:20px;letter-spacing:.1em;color:var(--mute)}
+#s3 .d .m{padding:0 34px;font-family:Anton;font-size:58px;text-transform:uppercase;display:flex;align-items:baseline;gap:18px}
+#s3 .d .m em{font-style:normal;font-family:InterW;font-weight:800;font-size:26px;color:var(--red2);text-transform:none}
+#s3 .d.first .m::after{content:"FOCO TOTAL";font-family:"Archivo Black";font-size:20px;letter-spacing:.08em;background:var(--yellow);padding:6px 12px;border-radius:8px;margin-left:auto;align-self:center}
+#s3 .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+#s3 .foot p{font-size:30px;font-weight:800}
+#s3 .swipe i{background:var(--ink)}
+#s3 .swipe i::after{border-left-color:var(--ink)}
+
+/* ---------- SLIDE 4 ---------- */
+#s4{background:var(--ink)}
+#s4 .lote{background:var(--red);color:var(--white);margin-top:60px;align-self:flex-start}
+#s4 .price{display:flex;align-items:flex-start;margin-top:36px;line-height:.82;height:330px}
+#s4 .price .rs{font-family:Anton;font-size:120px;margin-top:40px;margin-right:16px;color:var(--mute)}
+#s4 .price .v{font-family:Anton;font-size:400px;letter-spacing:-.01em;line-height:.82}
+#s4 .price .c{font-family:Anton;font-size:120px;margin-top:40px;color:var(--mute)}
+#s4 .sub{font-size:46px;font-weight:800;margin-top:20px}
+#s4 .sub span{color:var(--mute);font-weight:600}
+#s4 .seats{margin-top:48px;display:grid;grid-template-columns:repeat(20,1fr);gap:10px;max-width:920px}
+#s4 .seats i{display:block;aspect-ratio:1;border-radius:8px;background:var(--ink3);border:2px solid #343842}
+#s4 .seats i.on{background:var(--red);border-color:var(--red)}
+#s4 .seatlbl{margin-top:18px;font-family:"Archivo Black";font-size:30px;letter-spacing:.04em;text-transform:uppercase}
+#s4 .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+#s4 .chips span{border:2px solid #3a3d45;border-radius:999px;padding:10px 20px;font-weight:800;font-size:24px;color:#d5d7dd}
+#s4 .cta{margin-top:auto;background:var(--yellow);color:var(--ink);border-radius:24px;padding:34px 40px;display:flex;justify-content:space-between;align-items:center}
+#s4 .cta b{font-family:Anton;font-size:76px;text-transform:uppercase;line-height:.9}
+#s4 .cta span{font-size:28px;font-weight:800;text-align:right;line-height:1.2}
+#s4 .disc{margin-top:22px}
+
+/* ---------- FEED ---------- */
+#feed{background:var(--ink2)}
+#feed .tag{background:var(--ink3);color:var(--white);margin-top:56px;align-self:flex-start}
+#feed .tag i{width:14px;height:14px;border-radius:50%;background:var(--red);display:block}
+#feed h2{font-size:168px;margin-top:40px;line-height:.97}
+#feed h2 .r{color:var(--red)}
+#feed .eq{margin-top:40px;margin-bottom:36px;display:flex;align-items:center;gap:26px}
+#feed .eq .box{border:4px solid var(--white);border-radius:20px;padding:18px 26px;font-family:Anton;font-size:60px;line-height:1}
+#feed .eq .box small{display:block;font-family:InterW;font-weight:800;font-size:20px;letter-spacing:.12em;color:var(--mute);margin-top:6px}
+#feed .eq .op{font-family:Anton;font-size:70px;color:var(--mute)}
+#feed .eq .box.res{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+#feed .eq .box.res small{color:#5b4a00}
+#feed .info{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#feed .info div{background:var(--ink3);border-radius:18px;padding:22px 26px}
+#feed .info small{display:block;font-weight:800;font-size:20px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+#feed .info b{font-family:"Archivo Black";font-size:34px;line-height:1.15;display:block;margin-top:6px}
+#feed .info div.hot{background:var(--red)}
+#feed .info div.hot small{color:#ffd9d6}
+#feed .disc{margin-top:22px}
+
+/* ---------- STORY ---------- */
+#story{background:linear-gradient(180deg,var(--ink) 0%,#1a0705 100%)}
+#story .pad{padding:150px 80px 230px}
+#story .tag{background:var(--yellow);color:var(--ink);margin-top:70px;align-self:flex-start}
+#story h2{font-size:178px;margin-top:40px;line-height:.95}
+#story h2 .s{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:22px;color:#6b6f78}
+#story h2 .r{color:var(--red)}
+#story .when{margin-top:44px;display:flex;align-items:center;gap:26px}
+#story .when .cal{width:190px;border-radius:22px;overflow:hidden;text-align:center;background:var(--white);color:var(--ink)}
+#story .when .cal small{display:block;background:var(--red);color:var(--white);font-family:"Archivo Black";font-size:26px;padding:8px 0;letter-spacing:.1em}
+#story .when .cal b{display:block;font-family:Anton;font-size:110px;line-height:1.05}
+#story .when p{font-size:38px;font-weight:600;line-height:1.25}
+#story .when p b{font-weight:900}
+#story .wk{margin-top:56px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+#story .wk div{background:var(--ink3);border-radius:18px;padding:22px 8px;text-align:center;border-top:8px solid var(--red)}
+#story .wk small{display:block;font-weight:800;font-size:20px;letter-spacing:.12em;color:var(--mute)}
+#story .wk b{display:block;font-family:Anton;font-size:40px;line-height:1;margin-top:10px;text-transform:uppercase}
+#story .wk em{display:block;font-style:normal;font-size:17px;color:var(--mute);margin-top:6px;font-weight:600}
+#story .hr{margin-top:26px;margin-bottom:40px;font-family:"Archivo Black";font-size:32px;letter-spacing:.02em;text-align:center}
+#story .deal{margin-top:auto;background:var(--red);border-radius:28px;padding:36px 44px;display:flex;justify-content:space-between;align-items:center}
+#story .deal .p{font-family:Anton;font-size:150px;line-height:.85}
+#story .deal .p small{font-size:60px;vertical-align:top;margin-right:8px}
+#story .deal .t{text-align:right;font-family:"Archivo Black";font-size:34px;line-height:1.2;text-transform:uppercase}
+#story .deal .t span{display:block;background:var(--ink);padding:8px 14px;border-radius:10px;margin-top:10px;font-size:28px}
+#story .link{margin-top:26px;display:flex;justify-content:center;align-items:center;gap:16px;font-family:"Archivo Black";font-size:34px;text-transform:uppercase;letter-spacing:.06em}
+#story .link i{display:block;width:0;height:0;border:16px solid transparent;border-bottom:22px solid var(--yellow);border-top:0}
+#story .disc{text-align:center;margin-top:18px}
+</style>
+</head>
+<body>
+
+<!-- ===================== CARROSSEL 1/4 ===================== -->
+<section class="board c45" id="s1">
+  <div class="sheet" id="sheet1" style="left:560px;top:110px;transform:rotate(8deg)"></div>
+  <div class="pad">
+    <div class="top">
+      <span class="tag warn">⚠ Atenção, 1º ano</span>
+      <span class="pager">1/4</span>
+    </div>
+    <h1 class="anton">Para de<br>chorar<br>pelo <span class="enem">Enem.</span><span class="l2">Sério.</span></h1>
+    <div class="scrib marker">segunda<br>chance ↓</div>
+    <p class="lead">Travou? Chutou metade? Nem foi?<br><b>A UFMG tem outra porta</b>, ela abre <span class="hl">dia 13/12</span> e só cobra matéria do <b>1º ano</b>.</p>
+    <div class="bottom">
+      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+      <div class="swipe">Arrasta <i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARROSSEL 2/4 ===================== -->
+<section class="board c45" id="s2">
+  <div class="pad">
+    <div class="top">
+      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+      <span class="pager">2/4</span>
+    </div>
+    <p class="kick">A segunda chance tem nome</p>
+    <h2 class="anton">Seriado <span class="red">UFMG</span></h2>
+    <div class="list">
+      <div class="it"><span class="n">13/12</span><p><b>Domingo: prova da Etapa 1</b><small>Ciclo 2026–2028. Uma etapa por ano, três no total.</small></p></div>
+      <div class="it"><span class="n">1º ANO</span><p><b>Só cai conteúdo da 1ª série.</b><small>Nada de três anos de matéria acumulada.</small></p></div>
+      <div class="it"><span class="n">45+1</span><p><b>45 objetivas + 1 discursiva.</b><small>Linguagens, Matemática, Natureza e Humanas.</small></p></div>
+      <div class="it"><span class="n">3 OBRAS</span><p><b>O Quinze · Ideias para adiar o fim do mundo · Txai</b><small>Rachel de Queiroz, Ailton Krenak e Milton Nascimento.</small></p></div>
+    </div>
+    <div class="foot">
+      <p>Inscrito na Etapa 1? <span class="red">Então vem.</span></p>
+      <div class="swipe">Arrasta <i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARROSSEL 3/4 ===================== -->
+<section class="board c45" id="s3">
+  <div class="pad">
+    <div class="top">
+      <div class="brand"><span class="dot" style="background:var(--ink)"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+      <span class="pager">3/4</span>
+    </div>
+    <h2 class="anton">1 semana.<br><span>5 matérias.<br>25 horas.</span></h2>
+    <div class="meta"><div>07 a 11/12</div><div>13h30 → 18h30</div><div>📍 Neu Barreiro</div></div>
+    <div class="days">
+      <div class="d first"><div class="w">SEG<small>07/12</small></div><div class="m">Física</div></div>
+      <div class="d"><div class="w">TER<small>08/12</small></div><div class="m">Química</div></div>
+      <div class="d"><div class="w">QUA<small>09/12</small></div><div class="m">Matemática</div></div>
+      <div class="d"><div class="w">QUI<small>10/12</small></div><div class="m">Biologia</div></div>
+      <div class="d"><div class="w">SEX<small>11/12</small></div><div class="m">Humanidades <em>+ estudo das obras</em></div></div>
+    </div>
+    <div class="foot">
+      <p>Exclusivo para a <span style="color:var(--ink)">1ª série do Ensino Médio</span></p>
+      <div class="swipe">Arrasta <i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARROSSEL 4/4 ===================== -->
+<section class="board c45" id="s4">
+  <div class="pad">
+    <div class="top">
+      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+      <span class="pager">4/4</span>
+    </div>
+    <span class="tag lote">🔥 1º lote</span>
+    <div class="price"><span class="rs">R$</span><span class="v">25</span><span class="c">,00</span></div>
+    <p class="sub">a semana inteira. <span>Menos que um lanche.</span></p>
+    <div class="seats" id="seats"></div>
+    <p class="seatlbl"><span class="red">Só 40 vagas.</span> Acabou, acabou.</p>
+    <div class="chips"><span>25h de aula</span><span>5 matérias + obras</span><span>07 a 11/12</span><span>13h30 às 18h30</span></div>
+    <div class="cta"><b>Garante a sua</b><span>Link na bio<br>ou chama no direct</span></div>
+    <p class="disc">Revisão independente do Neu Barreiro, sem vínculo com a UFMG. Válido para quem já está inscrito na Etapa 1 do Seriado UFMG.</p>
+  </div>
+</section>
+
+<!-- ===================== CRIATIVO A · FEED 4:5 ===================== -->
+<section class="board c45" id="feed">
+  <div class="pad">
+    <div class="top">
+      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+    </div>
+    <span class="tag"><i></i>Seriado UFMG · Etapa 1 · 13/12</span>
+    <h2 class="anton">25 horas de<br>revisão.<br><span class="r">25 reais.</span></h2>
+    <div class="eq">
+      <div class="box">R$ 25<small>INSCRIÇÃO</small></div>
+      <span class="op">÷</span>
+      <div class="box">25 H<small>DE AULA</small></div>
+      <span class="op">=</span>
+      <div class="box res">R$ 1/H<small>PRA CHEGAR PRONTO</small></div>
+    </div>
+    <div class="info">
+      <div><small>Quando</small><b>07 a 11/12<br>13h30 às 18h30</b></div>
+      <div><small>Onde</small><b>Neu Barreiro</b></div>
+      <div><small>Para quem</small><b>1ª série do Ensino Médio</b></div>
+      <div class="hot"><small>1º lote</small><b>Só 40 vagas</b></div>
+    </div>
+    <p class="disc">Física · Química · Matemática · Biologia · Humanidades + obras. Revisão independente, sem vínculo com a UFMG.</p>
+  </div>
+</section>
+
+<!-- ===================== CRIATIVO B · STORY 9:16 ===================== -->
+<section class="board c916" id="story">
+  <div class="sheet" id="sheet2" style="left:600px;top:120px;transform:rotate(-8deg)"></div>
+  <div class="pad">
+    <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+    <span class="tag">⚠ Recado pro 1º ano</span>
+    <h2 class="anton"><span class="s">O Enem</span><br>passou.<br><span class="r">A UFMG<br>ainda não.</span></h2>
+    <div class="when">
+      <div class="cal"><small>DEZ · DOM</small><b>13</b></div>
+      <p><b>Seriado UFMG, Etapa 1.</b><br>Só conteúdo do 1º ano.<br>Sua segunda chance.</p>
+    </div>
+    <div class="wk">
+      <div><small>SEG</small><b>Física</b><em>07/12</em></div>
+      <div><small>TER</small><b>Quím.</b><em>08/12</em></div>
+      <div><small>QUA</small><b>Mat.</b><em>09/12</em></div>
+      <div><small>QUI</small><b>Bio.</b><em>10/12</em></div>
+      <div><small>SEX</small><b>Hum.</b><em>+ obras</em></div>
+    </div>
+    <p class="hr">13h30 às 18h30 · Neu Barreiro</p>
+    <div class="deal">
+      <div class="p"><small>R$</small>25</div>
+      <div class="t">A semana<br>inteira<span>Só 40 vagas</span></div>
+    </div>
+    <div class="link"><i></i> Toca no link e garante</div>
+    <p class="disc">Revisão independente, sem vínculo com a UFMG.</p>
+  </div>
+</section>
+
+<script>
+// cartão-resposta de fundo (semente fixa)
+function rng(s){return()=>(s=(s*16807)%2147483647)/2147483647}
+function sheet(el,seed,cols,rows){
+  const r=rng(seed);el.style.gridTemplateColumns=`repeat(${cols},auto)`;
+  let n=1;for(let c=0;c<cols;c++)for(let k=0;k<rows;k++){}
+  const cells=[];
+  for(let k=0;k<rows;k++)for(let c=0;c<cols;c++){cells.push(c*rows+k+1)}
+  cells.forEach(num=>{const row=document.createElement('div');row.className='row';
+    row.innerHTML=`<b>${num}</b>`;const pick=Math.floor(r()*5);const wrong=r()<.55;
+    for(let i=0;i<5;i++){const b=document.createElement('span');b.className='bub';
+      if(i===pick)b.classList.add(wrong?'x':'on');row.appendChild(b)}
+    el.appendChild(row)});
+}
+sheet(document.getElementById('sheet1'),7,2,22);
+sheet(document.getElementById('sheet2'),11,2,30);
+const seats=document.getElementById('seats');
+for(let i=0;i<40;i++){const s=document.createElement('i');s.className="on";seats.appendChild(s)}
+</script>
+</body>
+</html>
