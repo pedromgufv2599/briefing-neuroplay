@@ -40,11 +40,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 #s2{background:var(--red)}
 #s2 .kick{top:250px;font-family:"Archivo Black";font-size:46px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
 #s2 h2{top:330px;font-size:220px;line-height:.88}
-#s2 .cal{left:300px;top:765px;width:480px;border-radius:36px;overflow:hidden;background:var(--white);color:var(--ink);text-align:center;box-shadow:0 24px 0 rgba(0,0,0,.25)}
+#s2 .cal{position:relative;width:380px;border-radius:36px;overflow:hidden;background:var(--white);color:var(--ink);text-align:center;box-shadow:0 24px 0 rgba(0,0,0,.25)}
 #s2 .cal small{display:block;background:var(--ink);color:var(--white);font-family:"Archivo Black";font-size:40px;padding:14px 0;letter-spacing:.12em}
 #s2 .cal b{display:block;font-family:Anton;font-size:240px;line-height:1.05}
 #s2 .cal em{display:block;font-style:normal;font-family:"Archivo Black";font-size:28px;white-space:nowrap;letter-spacing:.14em;padding-bottom:20px;color:var(--red)}
-#s2 .chip{left:110px;right:110px;top:1170px;text-align:center;font-family:"Archivo Black";font-size:44px;background:var(--yellow);color:var(--ink);padding:18px 0;border-radius:999px;text-transform:uppercase}
+#s2 .chip{left:110px;right:110px;top:1205px;text-align:center;font-family:"Archivo Black";font-size:44px;background:var(--yellow);color:var(--ink);padding:18px 0;border-radius:999px;text-transform:uppercase}
 
 /* S3 */
 #s3{background:var(--ink2)}
@@ -57,7 +57,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 
 /* S4 */
 #s4{background:var(--ink)}
-#s4 h2{top:220px;font-size:120px}
+#s4 h2{top:190px;font-size:110px}
 #s4 .d{left:90px;right:90px;height:150px;display:grid;grid-template-columns:200px 1fr;border-radius:26px;overflow:hidden;background:var(--white);color:var(--ink)}
 #s4 .d .w{background:var(--red);color:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Anton;font-size:64px;line-height:.95}
 #s4 .d .w small{font:800 24px InterW;letter-spacing:.1em;color:#ffd9d6}
@@ -70,9 +70,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 #s5 .price{top:300px;font-family:Anton;font-size:470px;line-height:1}
 #s5 .price small{font-size:150px;vertical-align:top;margin-right:10px;position:relative;top:70px}
 #s5 .sub{top:790px;font-family:"Archivo Black";font-size:58px;text-transform:uppercase}
-#s5 .seats{left:200px;right:200px;top:890px;display:grid;grid-template-columns:repeat(10,1fr);gap:14px}
-#s5 .seats i{display:block;aspect-ratio:1;border-radius:12px;background:var(--red)}
-#s5 .vag{top:1175px;font-family:Anton;font-size:96px;text-transform:uppercase;color:var(--red2)}
+#s5 .seats{left:120px;right:120px;top:885px;display:grid;grid-template-columns:repeat(20,1fr);gap:8px}
+#s5 .seats i:nth-child(20n+11),#s5 .seats i:nth-child(20n+12),#s5 .seats i:nth-child(20n+13),#s5 .seats i:nth-child(20n+14),#s5 .seats i:nth-child(20n+15),#s5 .seats i:nth-child(20n+16),#s5 .seats i:nth-child(20n+17),#s5 .seats i:nth-child(20n+18),#s5 .seats i:nth-child(20n+19),#s5 .seats i:nth-child(20n+20){background:var(--ink)}
+#s5 .seats i{display:block;aspect-ratio:1;border-radius:7px;background:var(--red)}
+#s5 .vag{top:1090px;font-family:Anton;font-size:96px;text-transform:uppercase;color:var(--red2)}
 
 /* S6 */
 #s6{background:var(--red)}
@@ -104,8 +105,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
   <div class="scene" id="s2">
     <p class="kick abs c" id="s2k">Ninguém te contou não?</p>
     <h2 class="anton abs c" id="s2h">Seriado<br><span style="color:var(--ink)">UFMG</span></h2>
-    <div class="cal abs" id="s2c"><small>DEZEMBRO</small><b>13</b><em>DOMINGO · ETAPA 1</em></div>
-    <div class="chip abs" id="s2p">Só conteúdo do 1º ano</div>
+    <div class="abs" id="s2c" style="left:110px;right:110px;top:745px;display:flex;gap:40px;justify-content:center"><div class="cal"><small>SÁB · DEZ</small><b>12</b><em>2ª SÉRIE</em></div><div class="cal"><small>DOM · DEZ</small><b>13</b><em>1ª SÉRIE</em></div></div>
+    <div class="chip abs" id="s2p">Só matéria da sua série</div>
   </div>
 
   <!-- S3 -->
@@ -119,7 +120,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 
   <!-- S4 -->
   <div class="scene" id="s4">
-    <h2 class="anton abs c" id="s4h">5 dias. <span class="red">5 matérias.</span></h2>
+    <h2 class="anton abs c" id="s4h">5 dias. <span class="red">5 matérias.</span><small style="display:block;font-family:'Archivo Black';font-size:34px;letter-spacing:.06em;margin-top:18px;color:var(--yellow)">TOP 3 DE CADA · 1ª E 2ª SÉRIE</small></h2>
     <div class="d abs" id="d0" style="top:400px"><div class="w">SEG<small>07/12</small></div><div class="m">Química</div></div>
     <div class="d abs" id="d1" style="top:570px"><div class="w">TER<small>08/12</small></div><div class="m">Matemática</div></div>
     <div class="d abs" id="d2" style="top:740px"><div class="w">QUA<small>09/12</small></div><div class="m">Humanas</div></div>
@@ -133,7 +134,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
     <div class="price abs c" id="s5p"><small>R$</small><span id="cnt">0</span></div>
     <p class="sub abs c" id="s5s">A semana inteira!</p>
     <div class="seats abs" id="seats"></div>
-    <p class="vag abs c" id="s5v">Só 40 vagas</p>
+    <p class="vag abs c" id="s5v">2 turmas de 40</p>
   </div>
 
   <!-- S6 -->
@@ -141,8 +142,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
     <h2 class="anton abs c" id="s6h">Garante<br><span style="color:var(--ink)">a sua!</span></h2>
     <div class="arrow abs" id="s6a">▼</div>
     <div class="link abs" id="s6l">Link na bio</div>
-    <div class="end abs" id="s6e"><div class="brand" style="font-size:40px"><span class="dot"></span><div>Neu Barreiro<small style="color:#ffd9d6;font-size:20px">1º lote · R$ 25 · 40 vagas</small></div></div></div>
-    <p class="disc abs" id="s6d">Revisão independente, sem vínculo com a UFMG. Para inscritos na Etapa 1.</p>
+    <div class="end abs" id="s6e"><div class="brand" style="font-size:40px"><span class="dot"></span><div>Neu Barreiro<small style="color:#ffd9d6;font-size:20px">1º lote · R$ 25 · 2 turmas de 40</small></div></div></div>
+    <p class="disc abs" id="s6d">Revisão independente, sem vínculo com a UFMG. Para inscritos nas Etapas 1 e 2.</p>
   </div>
 
   <div id="cap"><div class="who"><i></i>Jeca</div><div class="line" id="line"></div></div>
@@ -152,10 +153,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 // ===== roteiro com tempos (s) =====
 const SEG=[
  [0.15,4.9,"Ô, sô! Cê foi mal no Enem? | Travou, chutou tudo, nem foi? | Para de chorar, uai!"],
- [5.1,11.4,"Ninguém te contou não? | Dia treze de dezembro | tem o Seriado da UFMG. | E só cai matéria | do primeiro ano, sô!"],
+ [5.1,11.4,"Ninguém te contou não? | Dia doze e treze de dezembro | tem o Seriado da UFMG, | pro primeiro | e pro segundo ano, sô!"],
  [11.6,19.4,"Aí o Neu Barreiro | armou um trem bão demais: | uma semana de revisão, | de sete a onze de dezembro, | de uma e meia às seis e meia!"],
- [19.6,27.8,"Segunda, química. | Terça, matemática. | Quarta, humanas. | Quinta, física. | E sexta, biologia | e análise das obras, sô!"],
- [28.0,34.3,"E quanto que é? | Vinte e cinco real, | a semana inteira! | Mas é só quarenta vaga, viu?"],
+ [19.6,27.8,"Segunda, química. | Terça, matemática. | Quarta, humanas. | Quinta, física. | Sexta, biologia e obras. | Só os três assunto que mais cai, sô!"],
+ [28.0,34.3,"E quanto que é? | Vinte e cinco real, | a semana inteira! | Mas é duas turma de quarenta, viu?"],
  [34.5,39.6,"Corre no link | e garante a sua. | Segunda chance boa assim | num passa duas vez não, sô!"],
 ];
 // distribui palavras por peso de letras
@@ -188,7 +189,7 @@ function scene(id,t,a,b){const el=$(id);const vis=t>=a&&t<b;el.style.opacity=vis
 (function(){const el=$('sheet');el.style.gridTemplateColumns='repeat(3,auto)';let s=5;const r=()=>(s=(s*16807)%2147483647)/2147483647;
  for(let k=0;k<15;k++)for(let c=0;c<3;c++){const row=document.createElement('div');row.className='row';row.innerHTML=`<b>${c*15+k+1}</b>`;const pk=Math.floor(r()*5),x=r()<.6;
  for(let i=0;i<5;i++){const b=document.createElement('span');b.className='bub'+(i===pk?(x?' x':' on'):'');row.appendChild(b)}el.appendChild(row)}
- const st=$('seats');for(let i=0;i<40;i++)st.appendChild(document.createElement('i'));})();
+ const st=$('seats');for(let i=0;i<80;i++)st.appendChild(document.createElement('i'));})();
 const seatEls=[...document.querySelectorAll('#seats i')];
 
 window.render=function(t){
@@ -232,7 +233,7 @@ window.render=function(t){
   up($('s5k'),t,28.05);
   const cp=cl((t-29.0)/.9);$('cnt').textContent=Math.round(25*eo(cp));pop($('s5p'),t,29.0,.4,1.3);
   up($('s5s'),t,30.4);
-  seatEls.forEach((s,i)=>pop(s,t,31.9+i*.025,.25,0));
+  seatEls.forEach((s,i)=>pop(s,t,31.9+i*.0125,.25,0));
   pop($('s5v'),t,33.0,.35,1.6);
 
   // S6 34.5–40

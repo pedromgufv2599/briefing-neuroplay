@@ -131,21 +131,79 @@
 #story .link{margin-top:26px;display:flex;justify-content:center;align-items:center;gap:16px;font-family:"Archivo Black";font-size:34px;text-transform:uppercase;letter-spacing:.06em}
 #story .link i{display:block;width:0;height:0;border:16px solid transparent;border-bottom:22px solid var(--yellow);border-top:0}
 #story .disc{text-align:center;margin-top:18px}
+
+/* ---------- v2: duas turmas ---------- */
+#s2 .it .n{min-width:200px}
+#s2 .it.two{align-items:flex-start}
+#s2 .it p .ob{display:block;margin-top:8px;font-size:21px;color:var(--yellow);font-weight:600}
+.grade .kick{font-family:"Archivo Black";font-size:24px;letter-spacing:.1em;text-transform:uppercase;margin-top:40px}
+.grade h2{font-size:90px;margin-top:10px;line-height:1}
+.grade .meta{display:flex;gap:12px;margin-top:22px}
+.grade .meta div{padding:12px 20px;border-radius:12px;font-family:"Archivo Black";font-size:24px;white-space:nowrap}
+.grade .rows{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.grade .r{display:grid;grid-template-columns:120px 1fr;border-radius:18px;overflow:hidden;min-height:130px}
+.grade .r .w{display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Anton;font-size:44px;line-height:.95}
+.grade .r .w small{font:800 18px InterW;letter-spacing:.1em;opacity:.7}
+.grade .r .b{padding:14px 22px;display:flex;flex-direction:column;justify-content:center}
+.grade .r .sub{font-family:Anton;font-size:44px;text-transform:uppercase;line-height:1;display:flex;align-items:center;gap:14px}
+.grade .r .sub .badge{font-family:"Archivo Black";font-size:16px;letter-spacing:.08em;background:var(--yellow);color:var(--ink);padding:5px 10px;border-radius:7px}
+.grade .r ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:8px}
+.grade .r li{font-weight:800;font-size:20px;padding:5px 11px;border-radius:8px;white-space:nowrap}
+.grade .r li b{font-family:Anton;font-weight:400;margin-right:6px}
+.grade .r .obras{margin-top:6px;font-size:18px;font-weight:600}
+.grade .r .obras b{font-weight:900}
+.grade .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.grade .foot p{font-size:24px;font-weight:800}
+/* grade 1ª: vermelho */
+#g1{background:var(--red)}
+#g1 .brand small,#g1 .pager{color:#ffd9d6}
+#g1 .kick{color:var(--ink)}
+#g1 .meta div{background:var(--ink)}
+#g1 .r{background:var(--white);color:var(--ink)}
+#g1 .r .w{background:var(--ink);color:var(--white)}
+#g1 .r li{background:#FFF1F0;color:var(--ink)}
+#g1 .r li b{color:var(--red)}
+#g1 .r .obras{color:#7a1a14}
+#g1 .swipe i{background:var(--ink)}#g1 .swipe i::after{border-left-color:var(--ink)}
+/* grade 2ª: claro */
+#g2{background:#F6F7F9;color:var(--ink)}
+#g2 .brand small,#g2 .pager{color:#6B7280}
+#g2 .kick{color:var(--red)}
+#g2 .meta div{background:var(--ink);color:var(--white)}
+#g2 .r{background:var(--white);color:var(--ink);border:2px solid #E7E8EC}
+#g2 .r .w{background:var(--red);color:var(--white)}
+#g2 .r li{background:#F1F2F4;color:var(--ink)}
+#g2 .r li b{color:var(--red)}
+#g2 .r .obras{color:#6B7280}
+#g2 .swipe{color:var(--ink)}
+/* preço v2 */
+#s4 .seatgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:40px}
+#s4 .seatgrid .lbl{font-family:"Archivo Black";font-size:22px;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
+#s4 .seatgrid .g{display:grid;grid-template-columns:repeat(10,1fr);gap:7px}
+#s4 .seatgrid .g i{display:block;aspect-ratio:1;border-radius:6px;background:var(--red)}
+#s4 .seatgrid .g.b i{background:var(--white)}
+/* story v2 */
+#story .cals{display:flex;gap:16px}
+#story .when .cal{width:170px}
+#story .when .cal small{font-size:20px;padding:10px 0}
+#story .when .cal b{font-size:96px}
+#story .when .cal em{display:block;font-style:normal;font-family:"Archivo Black";font-size:18px;padding-bottom:10px;color:var(--red);letter-spacing:.04em}
+#story .when p{font-size:32px}
 </style>
 </head>
 <body>
 
-<!-- ===================== CARROSSEL 1/4 ===================== -->
+<!-- ===================== CARROSSEL 1/5 ===================== -->
 <section class="board c45" id="s1">
   <div class="sheet" id="sheet1" style="left:560px;top:110px;transform:rotate(8deg)"></div>
   <div class="pad">
     <div class="top">
-      <span class="tag warn">⚠ Atenção, 1º ano</span>
-      <span class="pager">1/4</span>
+      <span class="tag warn">⚠ Atenção, 1º e 2º ano</span>
+      <span class="pager">1/5</span>
     </div>
     <h1 class="anton">Para de<br>chorar<br>pelo <span class="enem">Enem.</span><span class="l2">Sério.</span></h1>
     <div class="scrib marker">segunda<br>chance ↓</div>
-    <p class="lead">Travou? Chutou metade? Nem foi?<br><b>A UFMG tem outra porta</b>, ela abre <span class="hl">dia 13/12</span> e só cobra matéria do <b>1º ano</b>.</p>
+    <p class="lead">Travou? Chutou metade? Nem foi?<br><b>A UFMG tem outra porta</b>: o Seriado, <span class="hl">dias 12 e 13/12</span>, só com matéria da <b>sua série</b>.</p>
     <div class="bottom">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
       <div class="swipe">Arrasta <i></i></div>
@@ -153,66 +211,93 @@
   </div>
 </section>
 
-<!-- ===================== CARROSSEL 2/4 ===================== -->
+<!-- ===================== CARROSSEL 2/5 ===================== -->
 <section class="board c45" id="s2">
   <div class="pad">
     <div class="top">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">2/4</span>
+      <span class="pager">2/5</span>
     </div>
     <p class="kick">A segunda chance tem nome</p>
     <h2 class="anton">Seriado <span class="red">UFMG</span></h2>
     <div class="list">
-      <div class="it"><span class="n">13/12</span><p><b>Domingo: prova da Etapa 1</b><small>Ciclo 2026–2028. Uma etapa por ano, três no total.</small></p></div>
-      <div class="it"><span class="n">1º ANO</span><p><b>Só cai conteúdo da 1ª série.</b><small>Nada de três anos de matéria acumulada.</small></p></div>
-      <div class="it"><span class="n">45+1</span><p><b>45 objetivas + 1 discursiva.</b><small>Linguagens, Matemática, Natureza e Humanas.</small></p></div>
-      <div class="it"><span class="n">3 OBRAS</span><p><b>O Quinze · Ideias para adiar o fim do mundo · Txai</b><small>Rachel de Queiroz, Ailton Krenak e Milton Nascimento.</small></p></div>
+      <div class="it two"><span class="n">12/12</span><p><b>Sábado · Etapa 2 · 2ª série</b><small>Ciclo 2025–2027. Só conteúdo da 2ª série.</small><span class="ob">São Bernardo · Sobrevivendo ao racismo · Balé de pé no chão</span></p></div>
+      <div class="it two"><span class="n">13/12</span><p><b>Domingo · Etapa 1 · 1ª série</b><small>Ciclo 2026–2028. Só conteúdo da 1ª série.</small><span class="ob">O Quinze · Ideias para adiar o fim do mundo · Txai</span></p></div>
+      <div class="it"><span class="n">45+</span><p><b>45 objetivas + discursiva.</b><small>Linguagens, Matemática, Natureza e Humanas.</small></p></div>
+      <div class="it"><span class="n">3 ETAPAS</span><p><b>Uma por ano.</b><small>A nota das três define a sua vaga.</small></p></div>
     </div>
     <div class="foot">
-      <p>Inscrito na Etapa 1? <span class="red">Então vem.</span></p>
+      <p>Inscrito no Seriado? <span class="red">Então vem.</span></p>
       <div class="swipe">Arrasta <i></i></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== CARROSSEL 3/4 ===================== -->
-<section class="board c45" id="s3">
+<!-- ===================== CARROSSEL 3/5 · GRADE 1ª SÉRIE ===================== -->
+<section class="board c45 grade" id="g1">
   <div class="pad">
     <div class="top">
       <div class="brand"><span class="dot" style="background:var(--ink)"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">3/4</span>
+      <span class="pager">3/5</span>
     </div>
-    <h2 class="anton">1 semana.<br><span>5 matérias.<br>25 horas.</span></h2>
+    <p class="kick">Turma 1ª série · Etapa 1 · 13/12</p>
+    <h2 class="anton">O top 3 de <span style="color:var(--ink)">cada matéria.</span></h2>
     <div class="meta"><div>07 a 11/12</div><div>13h30 → 18h30</div><div>📍 Neu Barreiro</div></div>
-    <div class="days">
-      <div class="d"><div class="w">SEG<small>07/12</small></div><div class="m">Química</div></div>
-      <div class="d"><div class="w">TER<small>08/12</small></div><div class="m">Matemática</div></div>
-      <div class="d"><div class="w">QUA<small>09/12</small></div><div class="m">Humanidades</div></div>
-      <div class="d first"><div class="w">QUI<small>10/12</small></div><div class="m">Física</div></div>
-      <div class="d"><div class="w">SEX<small>11/12</small></div><div class="m">Biologia <em>+ análise de obras</em></div></div>
+    <div class="rows">
+      <div class="r"><div class="w">SEG<small>07/12</small></div><div class="b"><div class="sub">Química</div><ol><li><b>1</b>Tabela periódica</li><li><b>2</b>Ligações químicas</li><li><b>3</b>Estequiometria</li></ol></div></div>
+      <div class="r"><div class="w">TER<small>08/12</small></div><div class="b"><div class="sub">Matemática</div><ol><li><b>1</b>Função afim e quadrática</li><li><b>2</b>Exponencial e log</li><li><b>3</b>PA e PG</li></ol></div></div>
+      <div class="r"><div class="w">QUA<small>09/12</small></div><div class="b"><div class="sub">Humanidades</div><ol><li><b>1</b>Cartografia e fusos</li><li><b>2</b>Clima e questão ambiental</li><li><b>3</b>Grécia, Roma e cidadania</li></ol></div></div>
+      <div class="r"><div class="w">QUI<small>10/12</small></div><div class="b"><div class="sub">Física <span class="badge">FOCO TOTAL</span></div><ol><li><b>1</b>Cinemática (MU e MUV)</li><li><b>2</b>Leis de Newton</li><li><b>3</b>Trabalho e energia</li></ol></div></div>
+      <div class="r"><div class="w">SEX<small>11/12</small></div><div class="b"><div class="sub">Biologia + obras</div><ol><li><b>1</b>Citologia</li><li><b>2</b>Bioquímica celular</li><li><b>3</b>Fotossíntese e respiração</li></ol><p class="obras"><b>Obras:</b> O Quinze · Ideias para adiar o fim do mundo · Txai</p></div></div>
     </div>
     <div class="foot">
-      <p>Exclusivo para a <span style="color:var(--ink)">1ª série do Ensino Médio</span></p>
+      <p>40 vagas · 1ª série</p>
       <div class="swipe">Arrasta <i></i></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== CARROSSEL 4/4 ===================== -->
+<!-- ===================== CARROSSEL 4/5 · GRADE 2ª SÉRIE ===================== -->
+<section class="board c45 grade" id="g2">
+  <div class="pad">
+    <div class="top">
+      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
+      <span class="pager">4/5</span>
+    </div>
+    <p class="kick">Turma 2ª série · Etapa 2 · 12/12</p>
+    <h2 class="anton">O top 3 de <span class="red">cada matéria.</span></h2>
+    <div class="meta"><div>07 a 11/12</div><div>13h30 → 18h30</div><div>📍 Neu Barreiro</div></div>
+    <div class="rows">
+      <div class="r"><div class="w">SEG<small>07/12</small></div><div class="b"><div class="sub">Química</div><ol><li><b>1</b>Soluções</li><li><b>2</b>Termoquímica</li><li><b>3</b>Cinética e equilíbrio</li></ol></div></div>
+      <div class="r"><div class="w">TER<small>08/12</small></div><div class="b"><div class="sub">Matemática</div><ol><li><b>1</b>Trigonometria</li><li><b>2</b>Combinatória e probabilidade</li><li><b>3</b>Geometria espacial</li></ol></div></div>
+      <div class="r"><div class="w">QUA<small>09/12</small></div><div class="b"><div class="sub">Humanidades</div><ol><li><b>1</b>Escravidão e racismo no Brasil</li><li><b>2</b>Revolução Industrial</li><li><b>3</b>Urbanização e questão agrária</li></ol></div></div>
+      <div class="r"><div class="w">QUI<small>10/12</small></div><div class="b"><div class="sub">Física <span class="badge">FOCO TOTAL</span></div><ol><li><b>1</b>Termologia e calorimetria</li><li><b>2</b>Óptica geométrica</li><li><b>3</b>Ondulatória</li></ol></div></div>
+      <div class="r"><div class="w">SEX<small>11/12</small></div><div class="b"><div class="sub">Biologia + obras</div><ol><li><b>1</b>Fisiologia humana</li><li><b>2</b>Vírus, bactérias e doenças</li><li><b>3</b>Botânica</li></ol><p class="obras"><b>Obras:</b> São Bernardo · Sobrevivendo ao racismo · Balé de pé no chão</p></div></div>
+    </div>
+    <div class="foot">
+      <p>40 vagas · 2ª série</p>
+      <div class="swipe">Arrasta <i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARROSSEL 5/5 ===================== -->
 <section class="board c45" id="s4">
   <div class="pad">
     <div class="top">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">4/4</span>
+      <span class="pager">5/5</span>
     </div>
     <span class="tag lote">🔥 1º lote</span>
     <div class="price"><span class="rs">R$</span><span class="v">25</span><span class="c">,00</span></div>
     <p class="sub">a semana inteira. <span>Menos que um lanche.</span></p>
-    <div class="seats" id="seats"></div>
-    <p class="seatlbl"><span class="red">Só 40 vagas.</span> Acabou, acabou.</p>
-    <div class="chips"><span>25h de aula</span><span>5 matérias + obras</span><span>07 a 11/12</span><span>13h30 às 18h30</span></div>
+    <div class="seatgrid">
+      <div><p class="lbl red">Turma 1ª série · 40</p><div class="g" id="seatsA"></div></div>
+      <div><p class="lbl">Turma 2ª série · 40</p><div class="g b" id="seatsB"></div></div>
+    </div>
+    <p class="seatlbl" style="margin-top:26px"><span class="red">2 turmas. 40 vagas cada.</span> Acabou, acabou.</p>
     <div class="cta"><b>Garante a sua</b><span>Link na bio<br>ou chama no direct</span></div>
-    <p class="disc">Revisão independente do Neu Barreiro, sem vínculo com a UFMG. Válido para quem já está inscrito na Etapa 1 do Seriado UFMG.</p>
+    <p class="disc">Revisão independente do Neu Barreiro, sem vínculo com a UFMG. Para quem já está inscrito na Etapa 1 ou na Etapa 2 do Seriado UFMG.</p>
   </div>
 </section>
 
@@ -222,7 +307,7 @@
     <div class="top">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
     </div>
-    <span class="tag"><i></i>Seriado UFMG · Etapa 1 · 13/12</span>
+    <span class="tag"><i></i>Seriado UFMG · 1ª e 2ª série · 12 e 13/12</span>
     <h2 class="anton">25 horas de<br>revisão.<br><span class="r">25 reais.</span></h2>
     <div class="eq">
       <div class="box">R$ 25<small>INSCRIÇÃO</small></div>
@@ -234,10 +319,10 @@
     <div class="info">
       <div><small>Quando</small><b>07 a 11/12<br>13h30 às 18h30</b></div>
       <div><small>Onde</small><b>Neu Barreiro</b></div>
-      <div><small>Para quem</small><b>1ª série do Ensino Médio</b></div>
-      <div class="hot"><small>1º lote</small><b>Só 40 vagas</b></div>
+      <div><small>Para quem</small><b>1ª e 2ª série do Ensino Médio</b></div>
+      <div class="hot"><small>1º lote</small><b>2 turmas · 40 vagas cada</b></div>
     </div>
-    <p class="disc">Química · Matemática · Humanidades · Física · Biologia + análise de obras. Revisão independente, sem vínculo com a UFMG.</p>
+    <p class="disc">Top 3 de cada matéria: Química · Matemática · Humanidades · Física · Biologia + obras. Revisão independente, sem vínculo com a UFMG.</p>
   </div>
 </section>
 
@@ -246,11 +331,14 @@
   <div class="sheet" id="sheet2" style="left:600px;top:120px;transform:rotate(-8deg)"></div>
   <div class="pad">
     <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-    <span class="tag">⚠ Recado pro 1º ano</span>
+    <span class="tag">⚠ Recado pro 1º e 2º ano</span>
     <h2 class="anton"><span class="s">O Enem</span><br>passou.<br><span class="r">A UFMG<br>ainda não.</span></h2>
     <div class="when">
-      <div class="cal"><small>DEZ · DOM</small><b>13</b></div>
-      <p><b>Seriado UFMG, Etapa 1.</b><br>Só conteúdo do 1º ano.<br>Sua segunda chance.</p>
+      <div class="cals">
+        <div class="cal"><small>DEZ · SÁB</small><b>12</b><em>2ª SÉRIE</em></div>
+        <div class="cal"><small>DEZ · DOM</small><b>13</b><em>1ª SÉRIE</em></div>
+      </div>
+      <p><b>Seriado UFMG.</b><br>Só matéria da sua série.<br>Sua segunda chance.</p>
     </div>
     <div class="wk">
       <div><small>SEG</small><b>Quím.</b><em>07/12</em></div>
@@ -259,10 +347,10 @@
       <div><small>QUI</small><b>Física</b><em>10/12</em></div>
       <div><small>SEX</small><b>Bio.</b><em>+ obras</em></div>
     </div>
-    <p class="hr">13h30 às 18h30 · Neu Barreiro</p>
+    <p class="hr">Top 3 de cada matéria · 13h30 às 18h30</p>
     <div class="deal">
       <div class="p"><small>R$</small>25</div>
-      <div class="t">A semana<br>inteira<span>Só 40 vagas</span></div>
+      <div class="t">A semana<br>inteira<span>2 turmas · 40 vagas cada</span></div>
     </div>
     <div class="link"><i></i> Toca no link e garante</div>
     <p class="disc">Revisão independente, sem vínculo com a UFMG.</p>
@@ -285,8 +373,7 @@ function sheet(el,seed,cols,rows){
 }
 sheet(document.getElementById('sheet1'),7,2,22);
 sheet(document.getElementById('sheet2'),11,2,30);
-const seats=document.getElementById('seats');
-for(let i=0;i<40;i++){const s=document.createElement('i');s.className="on";seats.appendChild(s)}
+['seatsA','seatsB'].forEach(id=>{const g=document.getElementById(id);for(let i=0;i<40;i++)g.appendChild(document.createElement('i'))});
 </script>
 </body>
 </html>
