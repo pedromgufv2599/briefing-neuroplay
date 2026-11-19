@@ -1,0 +1,277 @@
+<title>Black Friday Neu Barreiro</title>
+<meta charset="utf-8">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: faixa de produção — personagem no topo, 3 efeitos do reel em blocos, 9 cards de vídeo com prompts copiáveis, calendário no fim */
+:root{
+  --bg:#111317; --surface:#1A1D23; --surface2:#22262E; --fg:#F3F4F6; --muted:#9AA0AB; --line:#2E333C;
+  --verm:#FA2F22; --verm-soft:#3A1614; --on-verm:#FFFFFF; --ok:#22C55E;
+  --f-disp:"Space Grotesk",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#F6F7F9; --surface:#FFFFFF; --surface2:#F0F1F4; --fg:#16181D; --muted:#5B616C; --line:#E2E4E9;
+  --verm:#E0241A; --verm-soft:#FFF1F0; --on-verm:#FFFFFF; --ok:#16A34A; color-scheme:light}}
+:root[data-theme="light"]{
+  --bg:#F6F7F9; --surface:#FFFFFF; --surface2:#F0F1F4; --fg:#16181D; --muted:#5B616C; --line:#E2E4E9;
+  --verm:#E0241A; --verm-soft:#FFF1F0; --on-verm:#FFFFFF; --ok:#16A34A; color-scheme:light}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 var(--f-body);margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-block:32px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:48px}
+h1,h2,h3{font-family:var(--f-disp);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.02em}
+h2{font-size:1.6rem}
+h3{font-size:1.1rem}
+p{margin:0}
+.eyebrow{font:500 .72rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+.muted{color:var(--muted)}
+header{display:grid;gap:14px}
+.tag{display:inline-block;background:var(--verm);color:var(--on-verm);font:700 .8rem/1 var(--f-disp);padding:6px 10px;border-radius:4px;letter-spacing:.04em}
+.lede{max-width:66ch;color:var(--muted)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;counter-reset:s}
+.flow div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:4px;min-width:0}
+.flow div::before{counter-increment:s;content:"Passo " counter(s);font:500 .7rem/1 var(--f-mono);color:var(--verm);letter-spacing:.1em;text-transform:uppercase}
+section{display:grid;gap:18px}
+.char{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:20px}
+@media (max-width:760px){.char{grid-template-columns:1fr}}
+.spec{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start}
+.spec dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0}
+.spec dt{font:500 .75rem/1.6 var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.spec dd{margin:0}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;background:#FA2F22;vertical-align:-1px;margin-right:6px}
+.prompts{display:grid;gap:12px;min-width:0}
+.pbox{background:var(--surface2);border:1px solid var(--line);border-radius:8px;overflow:hidden;min-width:0}
+.pbox .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line)}
+.pbox .bar span{font:500 .72rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pbox pre{margin:0;padding:12px;font:13px/1.55 var(--f-mono);white-space:pre-wrap;word-break:break-word}
+button.copy{font:600 .75rem/1 var(--f-body);background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer}
+button.copy:hover{border-color:var(--verm);color:var(--verm)}
+button.copy:focus-visible,.filters button:focus-visible{outline:2px solid var(--verm);outline-offset:2px}
+button.copy.done{border-color:var(--ok);color:var(--ok)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.rules li{border-left:3px solid var(--verm);padding:4px 0 4px 12px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:600 .85rem/1 var(--f-body);background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--verm);border-color:var(--verm);color:var(--on-verm)}
+.effect{display:grid;gap:14px}
+.effect-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
+.effect-head code{font:500 .8rem/1 var(--f-mono);background:var(--verm-soft);color:var(--verm);padding:5px 8px;border-radius:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px}
+@media (max-width:420px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px;align-content:start;min-width:0}
+.card-top{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.id{font:700 .85rem/1 var(--f-mono);color:var(--verm)}
+.trig{font:600 .72rem/1 var(--f-body);text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--muted)}
+.overlay{font:700 1.25rem/1.15 var(--f-disp);letter-spacing:-.01em}
+.overlay em{font-style:normal;color:var(--verm)}
+.beats{display:grid;gap:6px;margin:0;padding:0;list-style:none;font-size:.9rem}
+.beats li{display:grid;grid-template-columns:56px 1fr;gap:8px}
+.beats b{font:500 .75rem/1.7 var(--f-mono);color:var(--muted)}
+.voice{font-size:.92rem;border-left:3px solid var(--verm);padding-left:10px}
+details{border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;font-size:.88rem}
+details .prompts{margin-top:10px}
+.cal{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem/1.4 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:var(--surface)}
+tr:last-child td{border-bottom:0}
+td.v{font:700 .85rem/1.4 var(--f-mono);color:var(--verm)}
+tr.peak td{background:var(--verm-soft)}
+.note{font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Agência NeuroPlay · Kit de produção</span>
+  <h1>Black Friday <span style="color:var(--verm)">Neu Barreiro</span></h1>
+  <p class="lede">9 vídeos com a mesma personagem de IA, baseados nos 3 efeitos do reel de referência (mão saindo da tela, roda de zoom, batida no vidro). Cada efeito ganha 3 gatilhos mentais. Os campos entre colchetes, como <b>[XX]%</b>, são a oferta real a preencher.</p>
+  <div><span class="tag">BLACK FRIDAY · 27/11</span></div>
+</header>
+
+<section>
+  <span class="eyebrow">Fluxo</span>
+  <div class="flow">
+    <div><b>Criar a Nina</b><span class="muted">Gerar a selfie-base com o prompt mestre. Essa imagem é a âncora de todos os vídeos.</span></div>
+    <div><b>Gerar o efeito</b><span class="muted">Kinetik no WhatsApp (selfie + nome do efeito) ou Kling / Veo / Higgsfield com a selfie como frame inicial.</span></div>
+    <div><b>Voz</b><span class="muted">Fala da Nina no ElevenLabs, sempre com o mesmo ID de voz. Lip-sync no Hedra se ela falar em câmera.</span></div>
+    <div><b>Editar</b><span class="muted">CapCut: texto de tela, legenda, logo Neu no canto, CTA nos últimos 2s. 9:16, até 12s.</span></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Personagem fixa</span>
+  <h2>Nina, a cara do Neu</h2>
+  <div class="char">
+    <div class="spec">
+      <dl>
+        <dt>Idade</dt><dd>24 anos, ex-aluna e monitora</dd>
+        <dt>Rosto</dt><dd>Pele morena, cabelo cacheado castanho-escuro na altura do ombro, óculos redondos pretos finos</dd>
+        <dt>Roupa</dt><dd><span class="swatch"></span>Moletom vermelho #FA2F22 com "NEU" branco no peito. Argolas prateadas pequenas.</dd>
+        <dt>Cenário</dt><dd>Sala de aula com quadro de fórmulas de química desfocado</dd>
+        <dt>Tom</dt><dd>Animada, direta, fala como amiga que já passou no vestibular</dd>
+        <dt>Voz</dt><dd>Feminina jovem, PT-BR mineiro leve, ritmo rápido</dd>
+      </dl>
+    </div>
+    <div class="prompts">
+      <div class="pbox"><div class="bar"><span>Prompt mestre · selfie-base</span><button class="copy" type="button">Copiar</button></div><pre>Photorealistic vertical selfie, 9:16, of Nina, a 24-year-old Brazilian woman with warm brown skin, shoulder-length dark brown curly hair, thin round black glasses, small silver hoop earrings, confident friendly smile. She wears an oversized bright red (#FA2F22) hoodie with a small white "NEU" logo on the chest. Holding the phone at arm's length, eye contact with the lens, soft window light, modern classroom with a blurred whiteboard full of chemistry formulas behind her. Natural skin texture, smartphone front-camera look, no extra text.</pre></div>
+      <div class="pbox"><div class="bar"><span>Folha de personagem · consistência</span><button class="copy" type="button">Copiar</button></div><pre>Character reference sheet of the exact same woman from the reference image: front view, 3/4 left, 3/4 right, profile, and full body standing. Same face, same curly hair, same round black glasses, same red "NEU" hoodie, black jeans, white sneakers. Neutral light grey background, even studio light, photorealistic.</pre></div>
+    </div>
+  </div>
+  <ul class="rules">
+    <li><b>Sempre a mesma selfie</b> como imagem de referência. Midjourney: <code>--cref [url] --cw 100</code>. ChatGPT / Nano Banana: "mantenha exatamente a mesma pessoa".</li>
+    <li><b>Roupa travada.</b> Moletom vermelho em todos os 9 vídeos. Muda a cena, nunca a Nina.</li>
+    <li><b>Mesma voz</b>, mesmo ID no ElevenLabs. Salve o seed no Kling quando um vídeo sair bom.</li>
+    <li><b>Selo "conteúdo gerado por IA"</b> ativado na postagem do Instagram.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="eyebrow">Roteiros</span>
+  <h2>9 vídeos, 3 efeitos</h2>
+  <div class="filters" role="group" aria-label="Filtrar por efeito">
+    <button type="button" data-f="all" aria-pressed="true">Todos</button>
+    <button type="button" data-f="A" aria-pressed="false">Mão saindo da tela</button>
+    <button type="button" data-f="B" aria-pressed="false">Roda de zoom</button>
+    <button type="button" data-f="C" aria-pressed="false">Batida no vidro</button>
+  </div>
+  <div id="effects"></div>
+</section>
+
+<section>
+  <span class="eyebrow">Calendário</span>
+  <h2>Ordem de postagem</h2>
+  <div class="cal"><table>
+    <thead><tr><th>Data</th><th>Vídeo</th><th>Gatilho</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td>Sex 20/11</td><td class="v">B1</td><td>Curiosidade</td><td>Teaser, sem preço</td></tr>
+      <tr><td>Sáb 21/11</td><td class="v">A3</td><td>Exclusividade</td><td>Encher o grupo VIP</td></tr>
+      <tr><td>Seg 23/11</td><td class="v">B3</td><td>Prova social</td><td>Credibilidade</td></tr>
+      <tr><td>Ter 24/11</td><td class="v">A2</td><td>Reciprocidade</td><td>Abertura da oferta</td></tr>
+      <tr><td>Qua 25/11</td><td class="v">B2</td><td>Ancoragem</td><td>Mostrar o preço</td></tr>
+      <tr><td>Qui 26/11</td><td class="v">C1</td><td>Escassez</td><td>Vagas acabando</td></tr>
+      <tr class="peak"><td>Sex 27/11 · manhã</td><td class="v">A1</td><td>Urgência</td><td>Dia da Black Friday</td></tr>
+      <tr class="peak"><td>Sex 27/11 · noite</td><td class="v">C2</td><td>Contagem regressiva</td><td>Últimas 24h</td></tr>
+      <tr><td>Sáb 28/11</td><td class="v">C3</td><td>Medo de perder</td><td>Último empurrão</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Reels no feed às 12h e 19h. Mesmo vídeo no Status do WhatsApp e no Stories com link. Datas e preços são sugestão até a oferta ser fechada.</p>
+</section>
+
+</div>
+
+<script>
+const EFFECTS = {
+  A:{name:"Mão saindo da tela", kin:"hand from the screen", why:"Quebra a quarta parede: a Nina \"puxa\" quem assiste. Ideal para convite e entrega."},
+  B:{name:"Roda de zoom", kin:"zoom wheel", why:"Zoom contínuo que revela algo escondido. Ideal para curiosidade e revelação de preço."},
+  C:{name:"Batida no vidro", kin:"glass slam", why:"A Nina bate as mãos na tela como se fosse vidro. Interrompe o scroll. Ideal para escassez e urgência."}
+};
+const VIDEOS = [
+  {id:"A1",fx:"A",trig:"Urgência",
+   overlay:"A Black Friday do Neu <em>acaba sábado</em>",
+   beats:[["0–2s","Nina olha para a câmera, séria"],["2–5s","A mão dela sai da tela em direção a quem assiste"],["5–9s","Ela \"puxa\" a câmera para a sala de aula"],["9–12s","CTA: link na bio"]],
+   voice:"Ei, você! Vem cá. A Black Friday do Neu acaba sábado e você ainda tá aí rolando o feed?",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie looks straight into the lens, then extends her right hand forward until it seems to come out of the phone screen toward the viewer, grabs the camera and pulls it into the classroom with a quick whip motion. Handheld vertical 9:16, realistic motion, 5 seconds.",
+   caption:"A Black Friday do Neu Barreiro acaba sábado (28/11). [XX]% OFF na matrícula 2027. Link na bio. 🔴",
+   whats:"*A Black Friday do Neu acaba sábado!* 🔴\n[XX]% OFF na matrícula 2027.\nGaranta aqui: [LINK]"},
+  {id:"A2",fx:"A",trig:"Reciprocidade",
+   overlay:"Toma: <em>[XX]% OFF</em> na matrícula 2027",
+   beats:[["0–2s","Nina sorri com um cartão vermelho na mão"],["2–6s","A mão atravessa a tela oferecendo o cartão"],["6–9s","Close no cartão: \"[XX]% OFF · NEU\""],["9–12s","CTA: pega o seu no link"]],
+   voice:"Separei um presente pra você. É seu. Só pegar antes de sábado.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie smiles and holds a glossy red gift card. She reaches toward the lens and her hand with the card seems to come out of the phone screen, offering it to the viewer. Camera slowly pushes in on the card. Vertical 9:16, warm light, 5 seconds.",
+   caption:"Presente da Nina pra você: [XX]% OFF na matrícula 2027 do Neu Barreiro. Só até 28/11. Link na bio. 🎁",
+   whats:"*Presente pra você* 🎁\n[XX]% OFF na matrícula 2027 do Neu.\nVálido até *28/11*: [LINK]"},
+  {id:"A3",fx:"A",trig:"Exclusividade",
+   overlay:"O preço <em>só sai no grupo VIP</em>",
+   beats:[["0–2s","Nina cochicha olhando para os lados"],["2–6s","A mão sai da tela e puxa o celular de quem assiste"],["6–9s","Tela de grupo do WhatsApp \"VIP Black Neu\""],["9–12s","CTA: comenta VIP"]],
+   voice:"Psiu. O preço da Black não vai sair aqui. Só no grupo VIP. Comenta VIP que eu te mando o link.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie leans close to the lens and whispers, glancing sideways as if sharing a secret, then reaches out of the phone screen and grabs it, pulling the viewer toward her. Vertical 9:16, intimate handheld framing, 5 seconds.",
+   caption:"O preço da Black Friday do Neu sai primeiro no grupo VIP. Comenta VIP que a gente te manda o link. 🤫",
+   whats:"*Grupo VIP Black Neu* 🤫\nO preço sai primeiro lá.\nEntra: [LINK DO GRUPO]"},
+  {id:"B1",fx:"B",trig:"Curiosidade",
+   overlay:"Tem coisa chegando <em>sexta, 27/11</em>",
+   beats:[["0–2s","Nina pisca para a câmera"],["2–7s","Zoom contínuo entra no olho dela, atravessa a lente dos óculos"],["7–10s","Dentro: letreiro vermelho \"BLACK NEU\""],["10–12s","\"Ativa o lembrete\""]],
+   voice:"Eu não posso contar ainda. Mas sexta você vai querer estar aqui.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie winks. A continuous smooth zoom pushes into her eye, through the lens of her glasses, revealing a glowing red neon sign that reads BLACK NEU in a dark room. Seamless infinite-zoom transition, vertical 9:16, 6 seconds.",
+   caption:"Sexta (27/11) tem novidade no Neu Barreiro. Ativa o lembrete pra não perder. 👀",
+   whats:"*Sexta tem novidade no Neu* 👀\nFica de olho aqui no Status."},
+  {id:"B2",fx:"B",trig:"Ancoragem de preço",
+   overlay:"De <s>R$ [CHEIO]</s> por <em>R$ [BLACK]</em>",
+   beats:[["0–2s","Nina aponta para o quadro"],["2–7s","Zoom atravessa o quadro e para numa etiqueta de preço"],["7–10s","Preço cheio riscado, preço Black em vermelho"],["10–12s","\"Só até sábado\""]],
+   voice:"Olha o preço normal. Agora olha o da Black. É isso mesmo.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie points at the whiteboard behind her. The camera performs a continuous zoom past her shoulder into the whiteboard, through the chemistry formulas, landing on a big red price tag. Seamless infinite-zoom effect, vertical 9:16, 6 seconds.",
+   caption:"Matrícula 2027 do Neu Barreiro: de R$ [CHEIO] por R$ [BLACK]. Só na Black Friday, até 28/11. 💸",
+   whats:"*Black Friday Neu* 💸\nDe ~R$ [CHEIO]~ por *R$ [BLACK]*\nAté 28/11: [LINK]"},
+  {id:"B3",fx:"B",trig:"Prova social",
+   overlay:"<em>+[N] aprovados</em> saíram daqui",
+   beats:[["0–2s","Close na Nina, sozinha"],["2–7s","Zoom out contínuo revela a turma inteira atrás dela"],["7–10s","Fotos/nomes de aprovados surgem"],["10–12s","\"O próximo é você\""]],
+   voice:"Eu fui uma. Mas não fui a única.",
+   prompt:"Use the reference image as the first frame. Start on a close-up of the woman in the red NEU hoodie. A continuous smooth zoom out reveals a full classroom of cheering students behind her, then keeps pulling out to show the whole school building. Seamless reverse infinite-zoom, vertical 9:16, 6 seconds.",
+   caption:"Mais de [N] aprovados saíram do Neu Barreiro. O próximo pode ser você. Black Friday até 28/11. 🎓",
+   whats:"*+[N] aprovados saíram do Neu* 🎓\nO próximo pode ser você.\nBlack Friday até 28/11: [LINK]"},
+  {id:"C1",fx:"C",trig:"Escassez",
+   overlay:"Restam <em>[N] vagas</em> com desconto",
+   beats:[["0–1s","Tela calma"],["1–3s","Nina bate as duas mãos na tela, que vibra como vidro"],["3–8s","Ela fala colada no vidro"],["8–12s","Contador de vagas"]],
+   voice:"Para tudo! Restam [N] vagas com o desconto da Black. Depois volta o preço cheio.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie suddenly slams both palms flat against the camera as if it were a glass window, the screen shakes, her hands and face press close to the glass with a slight smudge. Dramatic, vertical 9:16, 5 seconds.",
+   caption:"Restam [N] vagas com desconto de Black Friday no Neu Barreiro. Depois volta o preço cheio. ⚠️",
+   whats:"*Restam [N] vagas* ⚠️\nDesconto de Black no Neu acaba quando lotar.\n[LINK]"},
+  {id:"C2",fx:"C",trig:"Contagem regressiva",
+   overlay:"<em>Últimas 24h</em> da Black Neu",
+   beats:[["0–1s","Relógio no canto: 23:59:59"],["1–3s","Batida no vidro, rachadura na tela"],["3–8s","Nina aponta para o relógio"],["8–12s","CTA com timer"]],
+   voice:"Acabou o tempo de pensar. Amanhã à meia-noite o desconto some.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie slams one fist against the camera as if hitting glass, a realistic crack spreads across the screen, she then points urgently at the top corner of the frame. Vertical 9:16, intense, 5 seconds.",
+   caption:"Últimas 24 horas da Black Friday do Neu Barreiro. Termina sábado (28/11) às 23h59. ⏳",
+   whats:"*Últimas 24h* ⏳\nBlack Neu termina sábado às 23h59.\n[LINK]"},
+  {id:"C3",fx:"C",trig:"Medo de perder",
+   overlay:"Vai deixar <em>pra 2028?</em>",
+   beats:[["0–1s","Nina de costas, quadro com \"ENEM 2027\""],["1–3s","Vira e bate no vidro"],["3–8s","Fala firme, olho no olho"],["8–12s","\"Hoje é o último dia\""]],
+   voice:"Ano que vem é ENEM. Vai começar preparado ou vai deixar pra 2028? Hoje é o último dia.",
+   prompt:"Use the reference image as the first frame. The woman in the red NEU hoodie stands facing a whiteboard, turns around quickly, walks to the camera and slams both hands on it as if it were glass, staring seriously into the lens. Vertical 9:16, cinematic, 6 seconds.",
+   caption:"Hoje é o último dia da Black Friday do Neu Barreiro. Vai começar 2027 preparado ou deixar pra 2028? 🔴",
+   whats:"*Último dia da Black Neu* 🔴\nVai deixar pra 2028?\n[LINK]"}
+];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function pbox(label,text){return `<div class="pbox"><div class="bar"><span>${label}</span><button class="copy" type="button">Copiar</button></div><pre>${esc(text)}</pre></div>`}
+const root=document.getElementById("effects");
+root.style.display="grid";root.style.gap="40px";
+root.innerHTML=Object.entries(EFFECTS).map(([k,e])=>`
+  <div class="effect" data-fx="${k}">
+    <div class="effect-head"><h3>${k} · ${e.name}</h3><code>Kinetik: ${e.kin}</code></div>
+    <p class="muted">${e.why}</p>
+    <div class="cards">${VIDEOS.filter(v=>v.fx===k).map(v=>`
+      <article class="card">
+        <div class="card-top"><span class="id">${v.id}</span><span class="trig">${v.trig}</span></div>
+        <p class="overlay">${v.overlay}</p>
+        <ul class="beats">${v.beats.map(b=>`<li><b>${b[0]}</b><span>${b[1]}</span></li>`).join("")}</ul>
+        <p class="voice">"${v.voice}"</p>
+        <details>
+          <summary>Prompts e legendas</summary>
+          <div class="prompts">
+            ${pbox("Vídeo · Kling / Veo / Higgsfield",v.prompt)}
+            ${pbox("Kinetik (WhatsApp)","Envie a selfie-base da Nina e digite: "+e.kin)}
+            ${pbox("Fala · ElevenLabs",v.voice)}
+            ${pbox("Legenda Instagram",v.caption+"\n\n#BlackFridayNeu #NeuBarreiro #Matricula2027 #ENEM2027")}
+            ${pbox("Status WhatsApp",v.whats)}
+          </div>
+        </details>
+      </article>`).join("")}
+    </div>
+  </div>`).join("");
+document.addEventListener("click",ev=>{
+  const b=ev.target.closest("button.copy"); if(!b) return;
+  const pre=b.closest(".pbox").querySelector("pre"); const t=pre.textContent;
+  const ok=()=>{b.textContent="Copiado";b.classList.add("done");setTimeout(()=>{b.textContent="Copiar";b.classList.remove("done")},1600)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selecionado"};
+  try{navigator.clipboard.writeText(t).then(ok,fallback)}catch(e){fallback()}
+});
+document.querySelectorAll(".filters button").forEach(btn=>btn.addEventListener("click",()=>{
+  const f=btn.dataset.f;
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===btn)));
+  document.querySelectorAll(".effect").forEach(el=>{el.hidden=!(f==="all"||el.dataset.fx===f)});
+}));
+</script>
