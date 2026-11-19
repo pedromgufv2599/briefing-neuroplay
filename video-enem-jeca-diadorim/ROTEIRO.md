@@ -21,7 +21,7 @@
 ## Direção
 1. **Voz do Jeca:** grave, lenta, mineira, com pausas. Uma respiração antes de "Deu, sim."
 2. **Voz de Diadorim:** baixa, cansada, sem drama.
-3. **Trilha:** violão dedilhado ou viola caipira, suave. Sobe aos 46 s. A trilha do arquivo é provisória.
+3. **Trilha:** original (`trilha_jeca_diadorim.mp3`), 72 BPM, Ré maior. Violão dedilhado, terças caipiras a partir de 36 s, cordas, subida aos 46 s, acorde final aos 53 s. Mixar a −19 LUFS sob a voz.
 4. **Som:** água correndo baixinho o tempo todo.
 
 ## Zonas seguras (já aplicadas)
@@ -38,5 +38,6 @@ Manda pra quem precisa ouvir isso hoje.
 
 ## Arquivos
 1. `capa_enem_jeca_diadorim.png`: capa 1080×1920
-2. `video_guia_jeca_diadorim.mp4`: vídeo-guia de 60 s com legendas, timing, rio animado, bocas e amanhecer. Falta a narração.
-3. `codigo/`: gera tudo de novo (`python3 render.py <pasta_codigo> saida.mp4 video` ou `capa.png capa`)
+2. `video_guia_jeca_diadorim.mp4`: vídeo-guia de 60 s com legendas, timing, rio animado, bocas, amanhecer e trilha. Falta a narração.
+3. `trilha_jeca_diadorim.mp3`: trilha original separada, para mixar com a voz.
+4. `codigo/`: gera tudo de novo (`python3 render.py <pasta_codigo> saida.mp4 video` ou `capa.png capa`)
