@@ -51,28 +51,28 @@ de sete a onze de dezembro,
 de uma e meia às seis e meia!
 
 14
-00:00:19,600 --> 00:00:20,817
-Segunda, física.
+00:00:19,600 --> 00:00:20,903
+Segunda, química.
 
 15
-00:00:20,817 --> 00:00:21,981
-Terça, química.
+00:00:20,903 --> 00:00:22,261
+Terça, matemática.
 
 16
-00:00:21,981 --> 00:00:23,356
-Quarta, matemática.
+00:00:22,261 --> 00:00:23,510
+Quarta, humanas.
 
 17
-00:00:23,356 --> 00:00:24,626
-Quinta, biologia.
+00:00:23,510 --> 00:00:24,705
+Quinta, física.
 
 18
-00:00:24,626 --> 00:00:25,948
-E sexta, humanas,
+00:00:24,705 --> 00:00:25,954
+E sexta, biologia
 
 19
-00:00:25,948 --> 00:00:27,800
-com as obras que vão cair.
+00:00:25,954 --> 00:00:27,800
+e análise das obras, sô!
 
 20
 00:00:28,000 --> 00:00:29,260

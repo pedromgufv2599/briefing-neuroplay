@@ -120,11 +120,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
   <!-- S4 -->
   <div class="scene" id="s4">
     <h2 class="anton abs c" id="s4h">5 dias. <span class="red">5 matérias.</span></h2>
-    <div class="d abs" id="d0" style="top:400px"><div class="w">SEG<small>07/12</small></div><div class="m">Física</div></div>
-    <div class="d abs" id="d1" style="top:570px"><div class="w">TER<small>08/12</small></div><div class="m">Química</div></div>
-    <div class="d abs" id="d2" style="top:740px"><div class="w">QUA<small>09/12</small></div><div class="m">Matemática</div></div>
-    <div class="d abs" id="d3" style="top:910px"><div class="w">QUI<small>10/12</small></div><div class="m">Biologia</div></div>
-    <div class="d abs" id="d4" style="top:1080px"><div class="w">SEX<small>11/12</small></div><div class="m">Humanas <em>+ obras</em></div></div>
+    <div class="d abs" id="d0" style="top:400px"><div class="w">SEG<small>07/12</small></div><div class="m">Química</div></div>
+    <div class="d abs" id="d1" style="top:570px"><div class="w">TER<small>08/12</small></div><div class="m">Matemática</div></div>
+    <div class="d abs" id="d2" style="top:740px"><div class="w">QUA<small>09/12</small></div><div class="m">Humanas</div></div>
+    <div class="d abs" id="d3" style="top:910px"><div class="w">QUI<small>10/12</small></div><div class="m">Física</div></div>
+    <div class="d abs" id="d4" style="top:1080px"><div class="w">SEX<small>11/12</small></div><div class="m">Biologia <em>+ análise de obras</em></div></div>
   </div>
 
   <!-- S5 -->
@@ -154,7 +154,7 @@ const SEG=[
  [0.15,4.9,"Ô, sô! Cê foi mal no Enem? | Travou, chutou tudo, nem foi? | Para de chorar, uai!"],
  [5.1,11.4,"Ninguém te contou não? | Dia treze de dezembro | tem o Seriado da UFMG. | E só cai matéria | do primeiro ano, sô!"],
  [11.6,19.4,"Aí o Neu Barreiro | armou um trem bão demais: | uma semana de revisão, | de sete a onze de dezembro, | de uma e meia às seis e meia!"],
- [19.6,27.8,"Segunda, física. | Terça, química. | Quarta, matemática. | Quinta, biologia. | E sexta, humanas, | com as obras que vão cair."],
+ [19.6,27.8,"Segunda, química. | Terça, matemática. | Quarta, humanas. | Quinta, física. | E sexta, biologia | e análise das obras, sô!"],
  [28.0,34.3,"E quanto que é? | Vinte e cinco real, | a semana inteira! | Mas é só quarenta vaga, viu?"],
  [34.5,39.6,"Corre no link | e garante a sua. | Segunda chance boa assim | num passa duas vez não, sô!"],
 ];
@@ -225,7 +225,7 @@ window.render=function(t){
   // S4 19.5–28
   scene('s4',t,19.5,28);
   up($('s4h'),t,19.6);
-  [19.65,21.15,22.6,24.2,25.7].forEach((t0,i)=>left($('d'+i),t,t0,.35,i%2?1100:-1100));
+  [19.65,21.0,22.4,23.8,25.2].forEach((t0,i)=>left($('d'+i),t,t0,.35,i%2?1100:-1100));
 
   // S5 28–34.5
   scene('s5',t,28,34.5);
