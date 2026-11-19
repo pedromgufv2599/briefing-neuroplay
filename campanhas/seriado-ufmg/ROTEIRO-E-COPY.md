@@ -37,6 +37,10 @@ Arquivos: `video/jeca-seriado-ufmg-40s.mp4` + `video/legendas-jeca.srt`.
 | 28–34s | *E quanto que é? Vinte e cinco real, um real por hora, sô! Mas é duas turma de quarenta, viu?* | R$ 25 · R$ 1 POR HORA · 2 TURMAS DE 40 |
 | 34–40s | *Corre no link e garante a sua. Segunda chance boa assim num passa duas vez não, sô!* | GARANTE A SUA · LINK NA BIO |
 
+**Trilha:** original, composta por síntese (sem direitos de terceiros). Dedilhado de viola + groove pop, 120 BPM, em Sol maior. Tem impacto em cada troca de cena (5, 11,5, 19,5, 28 e 34,5 s), um respiro aos 27 s e um rasqueado final aos 39 s.
+1. `video/trilha-seriado-ufmg-40s.wav`: trilha sozinha (-14 LUFS), para o editor.
+2. No MP4 a trilha está a -16 LUFS. Com a voz do Jeca, baixe a trilha uns 10 dB enquanto ele fala.
+
 **Direção do Jeca**
 1. Energia alta, bronca de tio.
 2. Arrastar o "sô", o "uai" e o "trem bão".
