@@ -230,6 +230,28 @@
 #story .schips{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
 #story .schips span{font-family:Anton;font-size:44px;text-transform:uppercase;background:var(--ink3);border-left:8px solid var(--red);padding:10px 20px;border-radius:12px;line-height:1}
 #story .schips span.hot{background:var(--yellow);color:var(--ink);border-left-color:var(--yellow)}
+
+/* ---------- CRIATIVO ÚNICO ---------- */
+#unico{background:radial-gradient(110% 70% at 85% 0%,#2a0d0b 0%,var(--ink) 55%)}
+#unico .u-tag{background:var(--yellow);color:var(--ink);font-size:22px;padding:10px 18px}
+#unico .u-ttl{font-size:130px;margin-top:44px;line-height:.95}
+#unico .hrs{display:flex;align-items:center;gap:24px;margin-top:40px}
+#unico .hrs .n{font-size:270px;line-height:.82}
+#unico .hrs .t{font-size:96px;line-height:1}
+#unico .por{display:flex;align-items:baseline;margin-top:30px;color:var(--yellow)}
+#unico .por .p{font-size:80px;color:var(--white);margin-right:24px}
+#unico .por .rs{font-size:100px;margin-right:10px}
+#unico .por .v{font-size:220px;line-height:.82}
+#unico .u-when{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+#unico .u-when div{background:var(--red);border-radius:20px;padding:20px 26px}
+#unico .u-when small{display:block;font:800 20px InterW;letter-spacing:.14em;text-transform:uppercase;color:#ffd9d6}
+#unico .u-when b{display:block;font-family:Anton;font-weight:400;font-size:62px;line-height:1.05;text-transform:uppercase;margin-top:4px}
+#unico .u-sala{margin-top:16px;background:var(--ink);border:3px solid #3a3d45;border-radius:20px;padding:20px 26px;display:flex;flex-direction:column;gap:4px}
+#unico .u-sala b{font-family:Anton;font-weight:400;font-size:46px;text-transform:uppercase;line-height:1.05}
+#unico .u-sala span{font-size:24px;color:var(--mute);font-weight:600}
+#unico .u-foot{margin-top:auto;font-size:28px;font-weight:600;color:#D5D7DD}
+#unico .u-foot b{color:var(--white);font-weight:900}
+#unico .disc{margin-top:12px}
 </style>
 </head>
 <body>
@@ -314,6 +336,27 @@
   </div>
 </section>
 
+<!-- ===================== CRIATIVO ÚNICO · FEED 4:5 ===================== -->
+<section class="board c45" id="unico">
+  <div class="sheet" id="sheet3" style="left:650px;top:380px;transform:rotate(8deg)"></div>
+  <div class="pad">
+    <div class="top">
+      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Intensivo Seriado UFMG</small></div></div>
+      <span class="tag u-tag">1ª e 2ª série</span>
+    </div>
+    <h1 class="anton u-ttl">Seriado <span class="red">UFMG</span></h1>
+    <div class="hrs anton"><span class="n">25</span><span class="t">horas de<br>revisão</span></div>
+    <div class="por anton"><span class="p">por</span><span class="rs">R$</span><span class="v">25</span></div>
+    <div class="u-when">
+      <div><small>Quando</small><b>07 a 11/12</b></div>
+      <div><small>Aulas</small><b>13h30 às 18h30</b></div>
+    </div>
+    <div class="u-sala"><b>Sala de estudos liberada das 9h às 19h</b><span>para estudar antes da aula</span></div>
+    <p class="u-foot"><b>40 vagas por turma.</b> Garanta a sua no direct ou no WhatsApp.</p>
+    <p class="disc">Revisão independente do Neu Barreiro, sem vínculo com a UFMG.</p>
+  </div>
+</section>
+
 <!-- ===================== CRIATIVO A · FEED 4:5 ===================== -->
 <section class="board c45" id="feed">
   <div class="pad">
@@ -374,6 +417,7 @@ function sheet(el,seed,cols,rows){
 }
 sheet(document.getElementById('sheet1'),7,2,22);
 sheet(document.getElementById('sheet2'),11,2,30);
+sheet(document.getElementById('sheet3'),13,2,22);
 ['seatsA','seatsB'].forEach(id=>{const g=document.getElementById(id);for(let i=0;i<40;i++)g.appendChild(document.createElement('i'))});
 </script>
 </body>
