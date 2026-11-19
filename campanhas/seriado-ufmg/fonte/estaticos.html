@@ -36,7 +36,7 @@
 #s2 .kick{font-family:"Archivo Black";font-size:30px;letter-spacing:.1em;color:var(--red);text-transform:uppercase;margin-top:64px}
 #s2 h2{font-size:150px;margin-top:18px}
 #s2 .list{margin-top:60px;display:flex;flex-direction:column;gap:24px}
-#s2 .it{display:flex;gap:24px;align-items:center;padding:32px 30px;background:var(--ink3);border-radius:22px;border-left:10px solid var(--red)}
+#s2 .it{display:flex;gap:24px;align-items:center;padding:40px 30px;background:var(--ink3);border-radius:22px;border-left:10px solid var(--red)}
 #s2 .it .n{font-family:Anton;font-size:60px;line-height:.9;color:var(--red);min-width:210px;white-space:nowrap}
 #s2 .it p{font-size:34px;line-height:1.22;font-weight:600}
 #s2 .it p b{font-weight:900}
@@ -208,20 +208,42 @@
 #cover .inv{margin-top:40px;font-size:36px;font-weight:600;color:#D5D7DD}
 #cover .inv b{font-weight:900;color:var(--white);background:var(--red);padding:2px 12px;border-radius:8px}
 #cover .bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto}
+
+/* ---------- MATÉRIAS v4 ---------- */
+#mats{background:var(--red)}
+#mats .brand small,#mats .pager{color:#ffd9d6}
+#mats .kick{font-family:"Archivo Black";font-size:28px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-top:50px}
+#mats h2{font-size:112px;margin-top:12px;line-height:1.02}
+#mats h2 span{color:var(--ink)}
+#mats .grid{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#mats .m{background:var(--white);color:var(--ink);border-radius:16px;padding:24px 24px;display:flex;align-items:center;gap:16px}
+#mats .m .i{font-family:Anton;font-size:30px;color:var(--red)}
+#mats .m b{font-family:Anton;font-weight:400;font-size:46px;text-transform:uppercase;line-height:1}
+#mats .m.hot{background:var(--ink);color:var(--white)}
+#mats .m.hot .i{color:var(--yellow)}
+#mats .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+#mats .foot p{font-size:28px;font-weight:800}
+#mats .swipe i{background:var(--ink)}#mats .swipe i::after{border-left-color:var(--ink)}
+
+#story .slead{margin-top:44px;font-size:36px;line-height:1.3;font-weight:600}
+#story .slead b{font-weight:900}
+#story .schips{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+#story .schips span{font-family:Anton;font-size:44px;text-transform:uppercase;background:var(--ink3);border-left:8px solid var(--red);padding:10px 20px;border-radius:12px;line-height:1}
+#story .schips span.hot{background:var(--yellow);color:var(--ink);border-left-color:var(--yellow)}
 </style>
 </head>
 <body>
 
-<!-- ===================== CARROSSEL 1/5 · CAPA ===================== -->
+<!-- ===================== CARROSSEL 1/4 · CAPA ===================== -->
 <section class="board c45" id="cover">
   <div class="sheet" id="sheet1" style="left:640px;top:420px;transform:rotate(8deg)"></div>
   <div class="pad">
     <div class="top">
       <div class="logo-slot"><img src="../logo/ufmg.png" alt="UFMG" onerror="this.parentNode.classList.add('empty')"></div>
-      <span class="pager">1/5</span>
+      <span class="pager">1/4</span>
     </div>
     <h1 class="anton ttl">Seriado <span class="red">UFMG</span></h1>
-    <p class="serie">Revisão 1ª e 2ª série · 07 a 11/12</p>
+    <p class="serie">Revisão para 1ª e 2ª série</p>
     <div class="hrs anton"><span class="n">25</span><span class="t">horas de<br>revisão</span></div>
     <div class="por anton"><span class="p">por</span><span class="rs">R$</span><span class="v">25</span></div>
     <p class="inv">Você investe <b>R$ 1 por hora.</b></p>
@@ -238,13 +260,13 @@
   <div class="pad">
     <div class="top">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">2/5</span>
+      <span class="pager">2/4</span>
     </div>
     <p class="kick">A segunda chance tem nome</p>
     <h2 class="anton">Seriado <span class="red">UFMG</span></h2>
     <div class="list">
-      <div class="it two"><span class="n">12/12</span><p><b>Sábado · Etapa 2 · 2ª série</b><small>Ciclo 2025–2027. Só conteúdo da 2ª série.</small><span class="ob">São Bernardo · Sobrevivendo ao racismo · Balé de pé no chão</span></p></div>
-      <div class="it two"><span class="n">13/12</span><p><b>Domingo · Etapa 1 · 1ª série</b><small>Ciclo 2026–2028. Só conteúdo da 1ª série.</small><span class="ob">O Quinze · Ideias para adiar o fim do mundo · Txai</span></p></div>
+      <div class="it two"><span class="n">ETAPA 1</span><p><b>Para a 1ª série</b><small>Só conteúdo da 1ª série.</small><span class="ob">O Quinze · Ideias para adiar o fim do mundo · Txai</span></p></div>
+      <div class="it two"><span class="n">ETAPA 2</span><p><b>Para a 2ª série</b><small>Só conteúdo da 2ª série.</small><span class="ob">São Bernardo · Sobrevivendo ao racismo · Balé de pé no chão</span></p></div>
       <div class="it"><span class="n">45+</span><p><b>45 objetivas + discursiva.</b><small>Linguagens, Matemática, Natureza e Humanas.</small></p></div>
       <div class="it"><span class="n">3 ETAPAS</span><p><b>Uma por ano.</b><small>A nota das três define a sua vaga.</small></p></div>
     </div>
@@ -255,60 +277,29 @@
   </div>
 </section>
 
-<!-- ===================== CARROSSEL 3/5 · GRADE 1ª SÉRIE ===================== -->
-<section class="board c45 grade" id="g1">
+<!-- ===================== CARROSSEL 3/4 · MATÉRIAS ===================== -->
+<section class="board c45" id="mats">
   <div class="pad">
     <div class="top">
       <div class="brand"><span class="dot" style="background:var(--ink)"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">3/5</span>
+      <span class="pager">3/4</span>
     </div>
-    <p class="kick">Turma 1ª série · Etapa 1 · 13/12</p>
-    <h2 class="anton">O top 3 de <span style="color:var(--ink)">cada matéria.</span></h2>
-    <div class="meta"><div>07 a 11/12</div><div>13h30 → 18h30</div><div>📍 Neu Barreiro</div></div>
-    <div class="rows">
-      <div class="r"><div class="w">SEG<small>07/12</small></div><div class="b"><div class="sub">Química</div><ol><li><b>1</b>Tabela periódica</li><li><b>2</b>Ligações químicas</li><li><b>3</b>Estequiometria</li></ol></div></div>
-      <div class="r"><div class="w">TER<small>08/12</small></div><div class="b"><div class="sub">Matemática</div><ol><li><b>1</b>Função afim e quadrática</li><li><b>2</b>Exponencial e log</li><li><b>3</b>PA e PG</li></ol></div></div>
-      <div class="r"><div class="w">QUA<small>09/12</small></div><div class="b"><div class="sub">Humanidades</div><ol><li><b>1</b>Cartografia e fusos</li><li><b>2</b>Clima e questão ambiental</li><li><b>3</b>Grécia, Roma e cidadania</li></ol></div></div>
-      <div class="r"><div class="w">QUI<small>10/12</small></div><div class="b"><div class="sub">Física <span class="badge">FOCO TOTAL</span></div><ol><li><b>1</b>Cinemática (MU e MUV)</li><li><b>2</b>Leis de Newton</li><li><b>3</b>Trabalho e energia</li></ol></div></div>
-      <div class="r"><div class="w">SEX<small>11/12</small></div><div class="b"><div class="sub">Biologia + obras</div><ol><li><b>1</b>Citologia</li><li><b>2</b>Bioquímica celular</li><li><b>3</b>Fotossíntese e respiração</li></ol><p class="obras"><b>Obras:</b> O Quinze · Ideias para adiar o fim do mundo · Txai</p></div></div>
-    </div>
+    <p class="kick">Uma semana de revisão</p>
+    <h2 class="anton">Os principais<br><span>tópicos de<br>cada matéria.</span></h2>
+    <div class="grid"><div class="m "><span class="i">01</span><b>Matemática</b></div><div class="m "><span class="i">02</span><b>Química</b></div><div class="m "><span class="i">03</span><b>Física</b></div><div class="m "><span class="i">04</span><b>Biologia</b></div><div class="m "><span class="i">05</span><b>História</b></div><div class="m "><span class="i">06</span><b>Geografia</b></div><div class="m "><span class="i">07</span><b>Filosofia</b></div><div class="m "><span class="i">08</span><b>Sociologia</b></div><div class="m "><span class="i">09</span><b>Linguagens</b></div><div class="m hot"><span class="i">10</span><b>Estudo de Obras</b></div></div>
     <div class="foot">
-      <p>40 vagas · 1ª série</p>
+      <p>Turmas de 1ª e 2ª série</p>
       <div class="swipe">Arrasta <i></i></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== CARROSSEL 4/5 · GRADE 2ª SÉRIE ===================== -->
-<section class="board c45 grade" id="g2">
-  <div class="pad">
-    <div class="top">
-      <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">4/5</span>
-    </div>
-    <p class="kick">Turma 2ª série · Etapa 2 · 12/12</p>
-    <h2 class="anton">O top 3 de <span class="red">cada matéria.</span></h2>
-    <div class="meta"><div>07 a 11/12</div><div>13h30 → 18h30</div><div>📍 Neu Barreiro</div></div>
-    <div class="rows">
-      <div class="r"><div class="w">SEG<small>07/12</small></div><div class="b"><div class="sub">Química</div><ol><li><b>1</b>Soluções</li><li><b>2</b>Termoquímica</li><li><b>3</b>Cinética e equilíbrio</li></ol></div></div>
-      <div class="r"><div class="w">TER<small>08/12</small></div><div class="b"><div class="sub">Matemática</div><ol><li><b>1</b>Trigonometria</li><li><b>2</b>Combinatória e probabilidade</li><li><b>3</b>Geometria espacial</li></ol></div></div>
-      <div class="r"><div class="w">QUA<small>09/12</small></div><div class="b"><div class="sub">Humanidades</div><ol><li><b>1</b>Escravidão e racismo no Brasil</li><li><b>2</b>Revolução Industrial</li><li><b>3</b>Urbanização e questão agrária</li></ol></div></div>
-      <div class="r"><div class="w">QUI<small>10/12</small></div><div class="b"><div class="sub">Física <span class="badge">FOCO TOTAL</span></div><ol><li><b>1</b>Termologia e calorimetria</li><li><b>2</b>Óptica geométrica</li><li><b>3</b>Ondulatória</li></ol></div></div>
-      <div class="r"><div class="w">SEX<small>11/12</small></div><div class="b"><div class="sub">Biologia + obras</div><ol><li><b>1</b>Fisiologia humana</li><li><b>2</b>Vírus, bactérias e doenças</li><li><b>3</b>Botânica</li></ol><p class="obras"><b>Obras:</b> São Bernardo · Sobrevivendo ao racismo · Balé de pé no chão</p></div></div>
-    </div>
-    <div class="foot">
-      <p>40 vagas · 2ª série</p>
-      <div class="swipe">Arrasta <i></i></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CARROSSEL 5/5 ===================== -->
+<!-- ===================== CARROSSEL 4/4 ===================== -->
 <section class="board c45" id="s4">
   <div class="pad">
     <div class="top">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
-      <span class="pager">5/5</span>
+      <span class="pager">4/4</span>
     </div>
     <span class="tag lote">🔥 1º lote</span>
     <div class="price"><span class="rs">R$</span><span class="v">25</span><span class="c">,00</span></div>
@@ -329,7 +320,7 @@
     <div class="top">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
     </div>
-    <span class="tag"><i></i>Seriado UFMG · 1ª e 2ª série · 12 e 13/12</span>
+    <span class="tag"><i></i>Seriado UFMG · 1ª e 2ª série</span>
     <h2 class="anton">25 horas de<br>revisão.<br><span class="r">25 reais.</span></h2>
     <div class="eq">
       <div class="box">R$ 25<small>INSCRIÇÃO</small></div>
@@ -339,12 +330,12 @@
       <div class="box res">R$ 1/H<small>PRA CHEGAR PRONTO</small></div>
     </div>
     <div class="info">
-      <div><small>Quando</small><b>07 a 11/12<br>13h30 às 18h30</b></div>
+      <div><small>O que tem</small><b>10 matérias + estudo de obras</b></div>
       <div><small>Onde</small><b>Neu Barreiro</b></div>
       <div><small>Para quem</small><b>1ª e 2ª série do Ensino Médio</b></div>
       <div class="hot"><small>1º lote</small><b>2 turmas · 40 vagas cada</b></div>
     </div>
-    <p class="disc">Top 3 de cada matéria: Química · Matemática · Humanidades · Física · Biologia + obras. Revisão independente, sem vínculo com a UFMG.</p>
+    <p class="disc">Principais tópicos de Matemática, Química, Física, Biologia, História, Geografia, Filosofia, Sociologia, Linguagens e Estudo de Obras. Revisão independente, sem vínculo com a UFMG.</p>
   </div>
 </section>
 
@@ -355,21 +346,9 @@
     <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
     <span class="tag">⚠ Recado pro 1º e 2º ano</span>
     <h2 class="anton"><span class="s">O Enem</span><br>passou.<br><span class="r">A UFMG<br>ainda não.</span></h2>
-    <div class="when">
-      <div class="cals">
-        <div class="cal"><small>DEZ · SÁB</small><b>12</b><em>2ª SÉRIE</em></div>
-        <div class="cal"><small>DEZ · DOM</small><b>13</b><em>1ª SÉRIE</em></div>
-      </div>
-      <p><b>Seriado UFMG.</b><br>Só matéria da sua série.<br>Sua segunda chance.</p>
-    </div>
-    <div class="wk">
-      <div><small>SEG</small><b>Quím.</b><em>07/12</em></div>
-      <div><small>TER</small><b>Mat.</b><em>08/12</em></div>
-      <div><small>QUA</small><b>Hum.</b><em>09/12</em></div>
-      <div><small>QUI</small><b>Física</b><em>10/12</em></div>
-      <div><small>SEX</small><b>Bio.</b><em>+ obras</em></div>
-    </div>
-    <p class="hr">Top 3 de cada matéria · 13h30 às 18h30</p>
+    <p class="slead"><b>Seriado UFMG</b> · revisão para 1ª e 2ª série.<br>Só matéria da sua série. Sua segunda chance.</p>
+    <div class="schips"><span>Matemática</span><span>Química</span><span>Física</span><span>Biologia</span><span>História</span><span>Geografia</span><span>Filosofia</span><span>Sociologia</span><span>Linguagens</span><span class="hot">Estudo de Obras</span></div>
+    <p class="hr">Os principais tópicos de cada matéria</p>
     <div class="deal">
       <div class="p"><small>R$</small>25</div>
       <div class="t">A semana<br>inteira<span>2 turmas · 40 vagas cada</span></div>

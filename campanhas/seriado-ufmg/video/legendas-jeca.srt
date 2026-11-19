@@ -15,68 +15,68 @@ pro Seriado UFMG
 por vinte e cinco real, uai!
 
 5
-00:00:05,100 --> 00:00:06,396
+00:00:05,100 --> 00:00:06,279
 Ninguém te contou não?
 
 6
-00:00:06,396 --> 00:00:07,960
-Dia doze e treze de dezembro
+00:00:06,279 --> 00:00:07,864
+Tá chegando o Seriado da UFMG,
 
 7
-00:00:07,960 --> 00:00:09,300
-tem o Seriado da UFMG,
+00:00:07,864 --> 00:00:09,490
+pro primeiro e pro segundo ano,
 
 8
-00:00:09,300 --> 00:00:09,970
-pro primeiro
+00:00:09,490 --> 00:00:11,400
+e só cai matéria da sua série, sô!
 
 9
-00:00:09,970 --> 00:00:11,400
-e pro segundo ano, sô!
-
-10
-00:00:11,600 --> 00:00:12,673
+00:00:11,600 --> 00:00:12,586
 Aí o Neu Barreiro
 
-11
-00:00:12,673 --> 00:00:14,281
+10
+00:00:12,586 --> 00:00:14,066
 armou um trem bão demais:
 
+11
+00:00:14,066 --> 00:00:15,903
+uma semana inteirinha de revisão,
+
 12
-00:00:14,281 --> 00:00:15,695
-uma semana de revisão,
+00:00:15,903 --> 00:00:17,069
+vinte e cinco hora,
 
 13
-00:00:15,695 --> 00:00:17,450
-de sete a onze de dezembro,
+00:00:17,069 --> 00:00:18,414
+com os principais tópicos
 
 14
-00:00:17,450 --> 00:00:19,400
-de uma e meia às seis e meia!
+00:00:18,414 --> 00:00:19,400
+de cada matéria!
 
 15
-00:00:19,600 --> 00:00:20,718
-Segunda, química.
+00:00:19,600 --> 00:00:21,057
+Matemática, química,
 
 16
-00:00:20,718 --> 00:00:21,883
-Terça, matemática.
+00:00:21,057 --> 00:00:22,351
+física, biologia,
 
 17
-00:00:21,883 --> 00:00:22,955
-Quarta, humanas.
+00:00:22,351 --> 00:00:23,808
+história, geografia,
 
 18
-00:00:22,955 --> 00:00:23,980
-Quinta, física.
+00:00:23,808 --> 00:00:25,372
+filosofia, sociologia,
 
 19
-00:00:23,980 --> 00:00:25,517
-Sexta, biologia e obras.
+00:00:25,372 --> 00:00:26,020
+linguagens
 
 20
-00:00:25,517 --> 00:00:27,800
-Só os três assunto que mais cai, sô!
+00:00:26,020 --> 00:00:27,800
+e estudo das obras, sô!
 
 21
 00:00:28,000 --> 00:00:29,109

@@ -49,6 +49,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 #s2 .cal small{display:block;background:var(--ink);color:var(--white);font-family:"Archivo Black";font-size:40px;padding:14px 0;letter-spacing:.12em}
 #s2 .cal b{display:block;font-family:Anton;font-size:240px;line-height:1.05}
 #s2 .cal em{display:block;font-style:normal;font-family:"Archivo Black";font-size:28px;white-space:nowrap;letter-spacing:.14em;padding-bottom:20px;color:var(--red)}
+#s2 .et{display:flex;align-items:center;justify-content:space-between;background:var(--white);color:var(--ink);border-radius:28px;padding:22px 44px;box-shadow:0 16px 0 rgba(0,0,0,.2)}
+#s2 .et b{font-family:Anton;font-weight:400;font-size:110px;text-transform:uppercase;line-height:1}
+#s2 .et span{font-family:"Archivo Black";font-size:46px;color:var(--red);text-transform:uppercase}
 #s2 .chip{left:110px;right:110px;top:1205px;text-align:center;font-family:"Archivo Black";font-size:44px;background:var(--yellow);color:var(--ink);padding:18px 0;border-radius:999px;text-transform:uppercase}
 
 /* S3 */
@@ -61,6 +64,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 #s3 .row b{font-family:Anton;font-size:96px;line-height:1;white-space:nowrap}
 
 /* S4 */
+#s4 .mt{width:460px;height:150px;display:flex;align-items:center;gap:16px;padding:0 28px;background:var(--white);color:var(--ink);border-radius:24px;font-family:Anton;font-size:60px;text-transform:uppercase;line-height:1}
+#s4 .mt span{font-size:34px;color:var(--red)}
+#s4 .mt.hot{background:var(--yellow)}
+#s4 .mt.hot{font-size:52px}
 #s4{background:var(--ink)}
 #s4 h2{top:190px;font-size:110px}
 #s4 .d{left:90px;right:90px;height:150px;display:grid;grid-template-columns:200px 1fr;border-radius:26px;overflow:hidden;background:var(--white);color:var(--ink)}
@@ -108,7 +115,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
   <div class="scene" id="s2">
     <p class="kick abs c" id="s2k">Ninguém te contou não?</p>
     <h2 class="anton abs c" id="s2h">Seriado<br><span style="color:var(--ink)">UFMG</span></h2>
-    <div class="abs" id="s2c" style="left:110px;right:110px;top:745px;display:flex;gap:40px;justify-content:center"><div class="cal"><small>SÁB · DEZ</small><b>12</b><em>2ª SÉRIE</em></div><div class="cal"><small>DOM · DEZ</small><b>13</b><em>1ª SÉRIE</em></div></div>
+    <div class="abs" id="s2c" style="left:110px;right:110px;top:780px;display:flex;flex-direction:column;gap:26px"><div class="et"><b>Etapa 1</b><span>1ª série</span></div><div class="et"><b>Etapa 2</b><span>2ª série</span></div></div>
     <div class="chip abs" id="s2p">Só matéria da sua série</div>
   </div>
 
@@ -117,18 +124,23 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
     <p class="kick abs c" id="s3k">Um trem bão demais</p>
     <h2 class="anton abs c" id="s3h">Semana de<br><span class="red">revisão</span></h2>
     <div class="pin abs" id="s3p">📍 No Neu Barreiro</div>
-    <div class="row abs" id="s3r1" style="top:880px"><small>QUANDO</small><b>07 a 11/12</b></div>
-    <div class="row abs" id="s3r2" style="top:1070px"><small>HORÁRIO</small><b>13h30 → 18h30</b></div>
+    <div class="row abs" id="s3r1" style="top:880px"><small>AULAS</small><b>25 horas</b></div>
+    <div class="row abs" id="s3r2" style="top:1070px"><small>FOCO</small><b style="font-size:60px">Principais tópicos</b></div>
   </div>
 
   <!-- S4 -->
   <div class="scene" id="s4">
-    <h2 class="anton abs c" id="s4h">5 dias. <span class="red">5 matérias.</span><small style="display:block;font-family:'Archivo Black';font-size:34px;letter-spacing:.06em;margin-top:18px;color:var(--yellow)">TOP 3 DE CADA · 1ª E 2ª SÉRIE</small></h2>
-    <div class="d abs" id="d0" style="top:400px"><div class="w">SEG<small>07/12</small></div><div class="m">Química</div></div>
-    <div class="d abs" id="d1" style="top:570px"><div class="w">TER<small>08/12</small></div><div class="m">Matemática</div></div>
-    <div class="d abs" id="d2" style="top:740px"><div class="w">QUA<small>09/12</small></div><div class="m">Humanas</div></div>
-    <div class="d abs" id="d3" style="top:910px"><div class="w">QUI<small>10/12</small></div><div class="m">Física</div></div>
-    <div class="d abs" id="d4" style="top:1080px"><div class="w">SEX<small>11/12</small></div><div class="m">Biologia <em>+ análise de obras</em></div></div>
+    <h2 class="anton abs c" id="s4h">10 matérias<small style="display:block;font-family:'Archivo Black';font-size:34px;letter-spacing:.06em;margin-top:18px;color:var(--yellow)">OS PRINCIPAIS TÓPICOS DE CADA</small></h2>
+    <div class="mt abs" id="m0" style="left:70px;top:400px"><span>01</span>Matemática</div>
+    <div class="mt abs" id="m1" style="left:550px;top:400px"><span>02</span>Química</div>
+    <div class="mt abs" id="m2" style="left:70px;top:572px"><span>03</span>Física</div>
+    <div class="mt abs" id="m3" style="left:550px;top:572px"><span>04</span>Biologia</div>
+    <div class="mt abs" id="m4" style="left:70px;top:744px"><span>05</span>História</div>
+    <div class="mt abs" id="m5" style="left:550px;top:744px"><span>06</span>Geografia</div>
+    <div class="mt abs" id="m6" style="left:70px;top:916px"><span>07</span>Filosofia</div>
+    <div class="mt abs" id="m7" style="left:550px;top:916px"><span>08</span>Sociologia</div>
+    <div class="mt abs" id="m8" style="left:70px;top:1088px"><span>09</span>Linguagens</div>
+    <div class="mt abs hot" id="m9" style="left:550px;top:1088px"><span>10</span>Estudo de Obras</div>
   </div>
 
   <!-- S5 -->
@@ -156,9 +168,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 // ===== roteiro com tempos (s) =====
 const SEG=[
  [0.15,4.9,"Ô, sô! | Vinte e cinco hora de revisão | pro Seriado UFMG | por vinte e cinco real, uai!"],
- [5.1,11.4,"Ninguém te contou não? | Dia doze e treze de dezembro | tem o Seriado da UFMG, | pro primeiro | e pro segundo ano, sô!"],
- [11.6,19.4,"Aí o Neu Barreiro | armou um trem bão demais: | uma semana de revisão, | de sete a onze de dezembro, | de uma e meia às seis e meia!"],
- [19.6,27.8,"Segunda, química. | Terça, matemática. | Quarta, humanas. | Quinta, física. | Sexta, biologia e obras. | Só os três assunto que mais cai, sô!"],
+ [5.1,11.4,"Ninguém te contou não? | Tá chegando o Seriado da UFMG, | pro primeiro e pro segundo ano, | e só cai matéria da sua série, sô!"],
+ [11.6,19.4,"Aí o Neu Barreiro | armou um trem bão demais: | uma semana inteirinha de revisão, | vinte e cinco hora, | com os principais tópicos | de cada matéria!"],
+ [19.6,27.8,"Matemática, química, | física, biologia, | história, geografia, | filosofia, sociologia, | linguagens | e estudo das obras, sô!"],
  [28.0,34.3,"E quanto que é? | Vinte e cinco real, | um real por hora, sô! | Mas é duas turma de quarenta, viu?"],
  [34.5,39.6,"Corre no link | e garante a sua. | Segunda chance boa assim | num passa duas vez não, sô!"],
 ];
@@ -216,19 +228,19 @@ window.render=function(t){
   // S2 5–11.5
   scene('s2',t,5,11.5);
   up($('s2k'),t,5.15);pop($('s2h'),t,6.9,.4,1.5);
-  pop($('s2c'),t,7.6,.45,0.2,-4);
-  up($('s2p'),t,9.6,.4,120);
+  [...$('s2c').children].forEach((c,i)=>left(c,t,7.4+i*.5,.35,i?1100:-1100));
+  up($('s2p'),t,9.4,.4,120);
 
   // S3 11.5–19.5
   scene('s3',t,11.5,19.5);
   up($('s3k'),t,11.65);pop($('s3h'),t,13.2,.4,1.5);
   pop($('s3p'),t,11.9,.35,1.6);
-  left($('s3r1'),t,15.3);left($('s3r2'),t,17.3,.35,1100);
+  left($('s3r1'),t,15.6);left($('s3r2'),t,17.0,.35,1100);
 
   // S4 19.5–28
   scene('s4',t,19.5,28);
   up($('s4h'),t,19.6);
-  [19.65,21.0,22.4,23.8,25.2].forEach((t0,i)=>left($('d'+i),t,t0,.35,i%2?1100:-1100));
+  MT.forEach((t0,i)=>pop($('m'+i),t,t0-.05,.3,1.5));
 
   // S5 28–34.5
   scene('s5',t,28,34.5);
@@ -248,6 +260,9 @@ window.render=function(t){
   caption(t);
 };
 window.CHUNKS=CHUNKS;
+const KEYS=['matem','quím','físi','biol','hist','geog','filo','soci','lingu','obras'];
+const ALLW=CHUNKS.flatMap(c=>c.words).filter(o=>o.s>=19.5&&o.s<28);
+const MT=KEYS.map(k=>{const o=ALLW.find(o=>o.w.toLowerCase().includes(k));return o?o.s:27});
 render(0);
 </script>
 </body>
