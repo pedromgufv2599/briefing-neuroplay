@@ -7,6 +7,11 @@
 4. **Obras Etapa 2:** *São Bernardo* (Graciliano Ramos), *Sobrevivendo ao racismo* (Luana Tolentino), documentário *Balé de pé no chão* (Lilian Solá Santiago e Marianna Monteiro).
 5. **Inscrições na UFMG:** encerradas em 14/08. A revisão serve a quem **já está inscrito**.
 
+## Capa do carrossel (slide 1)
+1. **Seriado UFMG** + logo da UFMG (arquivo em `logo/ufmg.png`).
+2. **25 horas de revisão por R$ 25.**
+3. Pequeno: *Você investe R$ 1 por hora.*
+
 ## Grade da revisão
 07 a 11/12 · 13h30 às 18h30 · Neu Barreiro · 1º lote R$ 25,00 · **2 turmas de 40 vagas**.
 
@@ -25,11 +30,11 @@ Arquivos: `video/jeca-seriado-ufmg-40s.mp4` + `video/legendas-jeca.srt`.
 
 | Tempo | Fala do Jeca | Tela |
 |---|---|---|
-| 00–05s | *Ô, sô! Cê foi mal no Enem? Travou, chutou tudo, nem foi? Para de chorar, uai!* | FOI MAL NO ENEM? → PARA DE CHORAR, UAI! |
+| 00–05s | *Ô, sô! Vinte e cinco hora de revisão pro Seriado UFMG por vinte e cinco real, uai!* | SERIADO UFMG · 25 HORAS DE REVISÃO · POR R$ 25 · R$ 1 POR HORA |
 | 05–11s | *Ninguém te contou não? Dia doze e treze de dezembro tem o Seriado da UFMG, pro primeiro e pro segundo ano, sô!* | SERIADO UFMG · calendários 12 (2ª série) e 13 (1ª série) |
 | 11–19s | *Aí o Neu Barreiro armou um trem bão demais: uma semana de revisão, de sete a onze de dezembro, de uma e meia às seis e meia!* | SEMANA DE REVISÃO · 07 a 11/12 · 13h30 → 18h30 |
 | 19–28s | *Segunda, química. Terça, matemática. Quarta, humanas. Quinta, física. Sexta, biologia e obras. Só os três assunto que mais cai, sô!* | 5 dias · TOP 3 DE CADA · 1ª E 2ª SÉRIE |
-| 28–34s | *E quanto que é? Vinte e cinco real, a semana inteira! Mas é duas turma de quarenta, viu?* | R$ 25 · 80 assentos · 2 TURMAS DE 40 |
+| 28–34s | *E quanto que é? Vinte e cinco real, um real por hora, sô! Mas é duas turma de quarenta, viu?* | R$ 25 · R$ 1 POR HORA · 2 TURMAS DE 40 |
 | 34–40s | *Corre no link e garante a sua. Segunda chance boa assim num passa duas vez não, sô!* | GARANTE A SUA · LINK NA BIO |
 
 **Direção do Jeca**
@@ -41,9 +46,9 @@ Arquivos: `video/jeca-seriado-ufmg-40s.mp4` + `video/legendas-jeca.srt`.
 ---
 
 ## Legenda do carrossel (Instagram)
-Para de chorar pelo Enem. Sério. 😤
+Seriado UFMG: 25 horas de revisão por R$ 25. Você investe R$ 1 por hora. 📚
 
-1º e 2º ano: a UFMG tem outra porta. O **Seriado UFMG** é dia 12/12 (2ª série) e 13/12 (1ª série), só com matéria da sua série.
+1º e 2º ano: O **Seriado UFMG** é dia 12/12 (2ª série) e 13/12 (1ª série), só com matéria da sua série.
 
 No Neu Barreiro é 1 semana de revisão, de 07 a 11/12, das 13h30 às 18h30, com o top 3 de cada matéria:
 1. Seg: Química
@@ -58,9 +63,10 @@ No Neu Barreiro é 1 semana de revisão, de 07 a 11/12, das 13h30 às 18h30, com
 _Revisão independente, sem vínculo com a UFMG. Para inscritos nas Etapas 1 e 2._
 
 ## Versão WhatsApp
-*PARA DE CHORAR PELO ENEM.* 😤
+*SERIADO UFMG: 25 HORAS DE REVISÃO POR R$ 25* 📚
+_Você investe R$ 1 por hora._
 
-1º e 2º ano: tem segunda chance. *Seriado UFMG*: _12/12 (2ª série)_ e _13/12 (1ª série)_.
+1º e 2º ano: *Seriado UFMG*: _12/12 (2ª série)_ e _13/12 (1ª série)_.
 
 *Revisão no Neu Barreiro*
 _07 a 11/12 · 13h30 às 18h30_

@@ -189,21 +189,42 @@
 #story .when .cal b{font-size:96px}
 #story .when .cal em{display:block;font-style:normal;font-family:"Archivo Black";font-size:18px;padding-bottom:10px;color:var(--red);letter-spacing:.04em}
 #story .when p{font-size:32px}
+
+/* ---------- CAPA v3 ---------- */
+#cover{background:radial-gradient(110% 70% at 85% 0%,#2a0d0b 0%,var(--ink) 55%)}
+#cover .logo-slot{height:120px;display:flex;align-items:center}
+#cover .logo-slot img{height:120px;width:auto;display:block;background:#fff;border-radius:16px;padding:12px 18px}
+#cover .logo-slot.empty img{display:none}
+#cover .logo-slot.empty{height:40px}
+#cover .ttl{font-size:160px;margin-top:60px;line-height:.95}
+#cover .serie{font-family:"Archivo Black";font-size:28px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:14px}
+#cover .hrs{display:flex;align-items:center;gap:26px;margin-top:80px}
+#cover .hrs .n{font-size:320px;line-height:.82}
+#cover .hrs .t{font-size:110px;line-height:1}
+#cover .por{display:flex;align-items:baseline;margin-top:50px;color:var(--yellow)}
+#cover .por .p{font-size:90px;color:var(--white);margin-right:28px}
+#cover .por .rs{font-size:110px;margin-right:12px}
+#cover .por .v{font-size:270px;line-height:.82}
+#cover .inv{margin-top:40px;font-size:36px;font-weight:600;color:#D5D7DD}
+#cover .inv b{font-weight:900;color:var(--white);background:var(--red);padding:2px 12px;border-radius:8px}
+#cover .bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto}
 </style>
 </head>
 <body>
 
-<!-- ===================== CARROSSEL 1/5 ===================== -->
-<section class="board c45" id="s1">
-  <div class="sheet" id="sheet1" style="left:560px;top:110px;transform:rotate(8deg)"></div>
+<!-- ===================== CARROSSEL 1/5 · CAPA ===================== -->
+<section class="board c45" id="cover">
+  <div class="sheet" id="sheet1" style="left:640px;top:420px;transform:rotate(8deg)"></div>
   <div class="pad">
     <div class="top">
-      <span class="tag warn">⚠ Atenção, 1º e 2º ano</span>
+      <div class="logo-slot"><img src="../logo/ufmg.png" alt="UFMG" onerror="this.parentNode.classList.add('empty')"></div>
       <span class="pager">1/5</span>
     </div>
-    <h1 class="anton">Para de<br>chorar<br>pelo <span class="enem">Enem.</span><span class="l2">Sério.</span></h1>
-    <div class="scrib marker">segunda<br>chance ↓</div>
-    <p class="lead">Travou? Chutou metade? Nem foi?<br><b>A UFMG tem outra porta</b>: o Seriado, <span class="hl">dias 12 e 13/12</span>, só com matéria da <b>sua série</b>.</p>
+    <h1 class="anton ttl">Seriado <span class="red">UFMG</span></h1>
+    <p class="serie">Revisão 1ª e 2ª série · 07 a 11/12</p>
+    <div class="hrs anton"><span class="n">25</span><span class="t">horas de<br>revisão</span></div>
+    <div class="por anton"><span class="p">por</span><span class="rs">R$</span><span class="v">25</span></div>
+    <p class="inv">Você investe <b>R$ 1 por hora.</b></p>
     <div class="bottom">
       <div class="brand"><span class="dot"></span><div>Neu Barreiro<small>Revisão Seriado UFMG</small></div></div>
       <div class="swipe">Arrasta <i></i></div>

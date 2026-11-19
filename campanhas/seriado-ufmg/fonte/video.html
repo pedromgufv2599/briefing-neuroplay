@@ -30,11 +30,16 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 
 /* S1 */
 #s1{background:radial-gradient(90% 60% at 50% 25%,#2a0d0b,var(--ink) 70%)}
-#s1 .sheet{left:120px;top:150px;transform:rotate(-8deg);opacity:.16}
-#s1 h1{font-size:220px;top:300px}
-#s1 .stk{font-family:"Archivo Black";font-size:64px;text-transform:uppercase;padding:14px 30px;border-radius:14px;background:var(--yellow);color:var(--ink)}
-#s1 .flash{inset:0;background:var(--red)}
-#s1 h2{font-size:250px;top:260px;line-height:.9}
+#s1 .sheet{left:120px;top:150px;transform:rotate(-8deg);opacity:.14}
+#s1 .kick{top:220px;font-family:Anton;font-size:120px;text-transform:uppercase;line-height:1}
+#s1 .hrs{top:400px;font-family:Anton;text-transform:uppercase;line-height:.86}
+#s1 .hrs .n{display:block;font-size:420px}
+#s1 .hrs .t{display:block;font-size:130px;line-height:.98}
+#s1 .por{top:930px;font-family:Anton;text-transform:uppercase;color:var(--yellow);line-height:1}
+#s1 .por .p{font-size:110px;color:#fff;margin-right:24px}
+#s1 .por .rs{font-size:120px;margin-right:10px}
+#s1 .por .v{font-size:230px}
+#s1 .inv{left:240px;right:240px;top:1190px;text-align:center;font-family:"Archivo Black";font-size:40px;text-transform:uppercase;background:var(--red);border-radius:16px;padding:12px 0}
 
 /* S2 */
 #s2{background:var(--red)}
@@ -93,12 +98,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
   <!-- S1 -->
   <div class="scene" id="s1">
     <div class="sheet abs" id="sheet"></div>
-    <h1 class="anton abs c" id="s1h">Foi mal<br>no Enem?</h1>
-    <div class="stk abs" id="k1" style="left:120px;top:830px">Travou?</div>
-    <div class="stk abs" id="k2" style="left:430px;top:960px">Chutou tudo?</div>
-    <div class="stk abs" id="k3" style="left:220px;top:1090px">Nem foi?</div>
-    <div class="flash abs" id="fl"></div>
-    <h2 class="anton abs c" id="s1h2">Para de<br>chorar,<br><span class="yel">uai!</span></h2>
+    <p class="kick abs c" id="s1k">Seriado <span class="red">UFMG</span></p>
+    <div class="hrs abs c" id="s1h"><span class="n">25</span><span class="t">horas de revisão</span></div>
+    <div class="por abs c" id="s1p"><span class="p">por</span><span class="rs">R$</span><span class="v">25</span></div>
+    <div class="inv abs" id="s1i">R$ 1 por hora</div>
   </div>
 
   <!-- S2 -->
@@ -132,7 +135,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
   <div class="scene" id="s5">
     <p class="kick abs c" id="s5k">E quanto que é?</p>
     <div class="price abs c" id="s5p"><small>R$</small><span id="cnt">0</span></div>
-    <p class="sub abs c" id="s5s">A semana inteira!</p>
+    <p class="sub abs c" id="s5s">R$ 1 por hora!</p>
     <div class="seats abs" id="seats"></div>
     <p class="vag abs c" id="s5v">2 turmas de 40</p>
   </div>
@@ -152,11 +155,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 <script>
 // ===== roteiro com tempos (s) =====
 const SEG=[
- [0.15,4.9,"Ô, sô! Cê foi mal no Enem? | Travou, chutou tudo, nem foi? | Para de chorar, uai!"],
+ [0.15,4.9,"Ô, sô! | Vinte e cinco hora de revisão | pro Seriado UFMG | por vinte e cinco real, uai!"],
  [5.1,11.4,"Ninguém te contou não? | Dia doze e treze de dezembro | tem o Seriado da UFMG, | pro primeiro | e pro segundo ano, sô!"],
  [11.6,19.4,"Aí o Neu Barreiro | armou um trem bão demais: | uma semana de revisão, | de sete a onze de dezembro, | de uma e meia às seis e meia!"],
  [19.6,27.8,"Segunda, química. | Terça, matemática. | Quarta, humanas. | Quinta, física. | Sexta, biologia e obras. | Só os três assunto que mais cai, sô!"],
- [28.0,34.3,"E quanto que é? | Vinte e cinco real, | a semana inteira! | Mas é duas turma de quarenta, viu?"],
+ [28.0,34.3,"E quanto que é? | Vinte e cinco real, | um real por hora, sô! | Mas é duas turma de quarenta, viu?"],
  [34.5,39.6,"Corre no link | e garante a sua. | Segunda chance boa assim | num passa duas vez não, sô!"],
 ];
 // distribui palavras por peso de letras
@@ -205,11 +208,10 @@ window.render=function(t){
   // S1 0–5
   scene('s1',t,0,5);
   $('sheet').style.transform=`rotate(-8deg) translateY(${-t*14}px)`;
-  pop($('s1h'),t,.15,.4,1.8);
-  pop($('k1'),t,1.55,.3,1.8,-6);pop($('k2'),t,2.15,.3,1.8,4);pop($('k3'),t,2.85,.3,1.8,-3);
-  const f=t>=3.55?1:0;$('fl').style.opacity=f;
-  $('s1h').style.visibility=t>=3.55?'hidden':'visible';['k1','k2','k3'].forEach(k=>$(k).style.visibility=t>=3.55?'hidden':'visible');
-  if(t>=3.55){pop($('s1h2'),t,3.55,.35,2.2);const sh=t<4.2?Math.sin(t*90)*10*(4.2-t):0;$('s1h2').style.transform+=` translateX(${sh}px)`}else $('s1h2').style.opacity=0;
+  up($('s1k'),t,.1,.35,-60);
+  pop($('s1h'),t,.75,.4,1.7);
+  pop($('s1p'),t,3.0,.35,1.8,-2);
+  pop($('s1i'),t,4.1,.3,1.5);
 
   // S2 5–11.5
   scene('s2',t,5,11.5);

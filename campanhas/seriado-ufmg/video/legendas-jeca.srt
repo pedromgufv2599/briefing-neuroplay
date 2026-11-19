@@ -1,107 +1,111 @@
 1
-00:00:00,150 --> 00:00:01,877
-Ô, sô! Cê foi mal no Enem?
+00:00:00,150 --> 00:00:00,722
+Ô, sô!
 
 2
-00:00:01,877 --> 00:00:03,648
-Travou, chutou tudo, nem foi?
+00:00:00,722 --> 00:00:02,305
+Vinte e cinco hora de revisão
 
 3
-00:00:03,648 --> 00:00:04,900
-Para de chorar, uai!
+00:00:02,305 --> 00:00:03,185
+pro Seriado UFMG
 
 4
+00:00:03,185 --> 00:00:04,900
+por vinte e cinco real, uai!
+
+5
 00:00:05,100 --> 00:00:06,396
 Ninguém te contou não?
 
-5
+6
 00:00:06,396 --> 00:00:07,960
 Dia doze e treze de dezembro
 
-6
+7
 00:00:07,960 --> 00:00:09,300
 tem o Seriado da UFMG,
 
-7
+8
 00:00:09,300 --> 00:00:09,970
 pro primeiro
 
-8
+9
 00:00:09,970 --> 00:00:11,400
 e pro segundo ano, sô!
 
-9
+10
 00:00:11,600 --> 00:00:12,673
 Aí o Neu Barreiro
 
-10
+11
 00:00:12,673 --> 00:00:14,281
 armou um trem bão demais:
 
-11
+12
 00:00:14,281 --> 00:00:15,695
 uma semana de revisão,
 
-12
+13
 00:00:15,695 --> 00:00:17,450
 de sete a onze de dezembro,
 
-13
+14
 00:00:17,450 --> 00:00:19,400
 de uma e meia às seis e meia!
 
-14
+15
 00:00:19,600 --> 00:00:20,718
 Segunda, química.
 
-15
+16
 00:00:20,718 --> 00:00:21,883
 Terça, matemática.
 
-16
+17
 00:00:21,883 --> 00:00:22,955
 Quarta, humanas.
 
-17
+18
 00:00:22,955 --> 00:00:23,980
 Quinta, física.
 
-18
+19
 00:00:23,980 --> 00:00:25,517
 Sexta, biologia e obras.
 
-19
+20
 00:00:25,517 --> 00:00:27,800
 Só os três assunto que mais cai, sô!
 
-20
-00:00:28,000 --> 00:00:29,185
+21
+00:00:28,000 --> 00:00:29,109
 E quanto que é?
 
-21
-00:00:29,185 --> 00:00:30,585
+22
+00:00:29,109 --> 00:00:30,419
 Vinte e cinco real,
 
-22
-00:00:30,585 --> 00:00:31,823
-a semana inteira!
-
 23
-00:00:31,823 --> 00:00:34,300
-Mas é duas turma de quarenta, viu?
+00:00:30,419 --> 00:00:31,982
+um real por hora, sô!
 
 24
+00:00:31,982 --> 00:00:34,300
+Mas é duas turma de quarenta, viu?
+
+25
 00:00:34,500 --> 00:00:35,310
 Corre no link
 
-25
+26
 00:00:35,310 --> 00:00:36,407
 e garante a sua.
 
-26
+27
 00:00:36,407 --> 00:00:37,789
 Segunda chance boa assim
 
-27
+28
 00:00:37,789 --> 00:00:39,600
 num passa duas vez não, sô!
