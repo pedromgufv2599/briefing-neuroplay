@@ -3,7 +3,7 @@ C = []
 
 C.append(dict(slug="1-questao-anulada", dia="Qui 19/11", slides=[
  dict(t="cover", kicker="Gabarito oficial · 18/11",
-      title="Uma conta que **não fechava** anulou uma questão do Enem 2026",
+      pre="Uma conta que", key="Não\nfechava", post="anulou uma questão",
       sub="Acertou ou errou? Spoiler: tanto faz."),
  dict(t="text", h="O que aconteceu",
       body="O Inep divulgou o gabarito oficial e anulou **1 questão de Matemática**.\n\nFoi a **única anulada** da prova inteira.",
@@ -26,7 +26,7 @@ C.append(dict(slug="1-questao-anulada", dia="Qui 19/11", slides=[
 
 C.append(dict(slug="2-fe-crista", dia="Sex 20/11", slides=[
  dict(t="cover", kicker="Virou caso de PGR",
-      title="O Enem 2026 foi acusado de **atacar a fé cristã**",
+      pre="O Enem 2026 foi acusado de", key="Atacar\na fé cristã", post="",
       sub="Um senador foi à PGR. O Inep respondeu. Quem tem razão?"),
  dict(t="text", h="A questão 62",
       body="Caderno azul, 1º dia.\n\nTrecho de *História do Medo no Ocidente*, do historiador francês **Jean Delumeau**.\n\nTema: sermões do século XIII e a **misoginia de base teológica** da época."),
@@ -46,7 +46,7 @@ C.append(dict(slug="2-fe-crista", dia="Sex 20/11", slides=[
 
 C.append(dict(slug="3-agro", dia="Sáb 21/11", slides=[
  dict(t="cover", kicker="O campo contra a prova",
-      title="O agro **declarou guerra** ao Enem 2026",
+      pre="O agro declarou", key="Guerra", post="ao Enem 2026",
       sub="Fome, soja e MST em duas questões. Arrasta e decide."),
  dict(t="text", h="A questão do MST",
       body="Segundo o **Sistema Faep**, a questão apresentou a formação do **MST**, baseada na **agroecologia**, como “transformação da realidade fundiária”."),
@@ -66,7 +66,7 @@ C.append(dict(slug="3-agro", dia="Sáb 21/11", slides=[
 
 C.append(dict(slug="4-redacao-sus", dia="Dom 22/11", slides=[
  dict(t="cover", kicker="Redação na Justiça",
-      title="Querem **anular a redação** do Enem 2026",
+      pre="Querem", key="Anular a\nredação", post="do Enem 2026",
       sub="O tema do SUS foi parar com um juiz federal. Sua nota corre risco?"),
  dict(t="quote", h="O tema",
       big="“A valorização do Sistema Único de Saúde (SUS) como direito universal”",
@@ -89,8 +89,8 @@ C.append(dict(slug="4-redacao-sus", dia="Dom 22/11", slides=[
 
 C.append(dict(slug="5-tri", dia="Seg 23/11", slides=[
  dict(t="cover", kicker="A polêmica que volta todo ano",
-      title="A TRI é **justa** ou é um **sorteio**?",
-      sub="Mesmo número de acertos, notas diferentes. Entenda antes de surtar."),
+      pre="A TRI é", key="Justa ou\nsorteio?", post="Mesmo acerto, nota diferente",
+      sub="Entenda antes de surtar com a sua nota."),
  dict(t="text", h="O que é a TRI",
       body="Teoria de Resposta ao Item.\n\nO Enem **não conta só acertos**. Avalia **quais** questões você acertou.\n\nCada questão tem sua própria dificuldade."),
  dict(t="text", h="O critério",

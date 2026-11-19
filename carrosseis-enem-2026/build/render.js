@@ -11,6 +11,13 @@ const path = require('path');
     if (only && !s.startsWith(only)) continue;
     await page.goto('file://' + path.resolve(s + '.html'));
     await page.evaluate(() => document.fonts.ready);
+    // Ajusta cada tarja para caber na largura (máx. 210px de fonte)
+    await page.evaluate(() => {
+      document.querySelectorAll('.tarja').forEach(t => {
+        let fs = 200; t.style.fontSize = fs + 'px';
+        while (t.offsetWidth > 930 && fs > 80) { fs -= 2; t.style.fontSize = fs + 'px'; }
+      });
+    });
     const out = path.resolve('..', s);
     fs.mkdirSync(out, { recursive: true });
     const els = await page.$$('section.slide');
